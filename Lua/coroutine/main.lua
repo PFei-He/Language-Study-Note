@@ -2,9 +2,11 @@
 -- Created by IntelliJ IDEA.
 -- User: fay
 -- Date: 2017/5/4
--- Time: 下午3:18
+-- Time: 上午10:09
 -- To change this template use File | Settings | File Templates.
 --
+
+--$ lua main.lua
 
 
 local co = coroutine.create(function ()

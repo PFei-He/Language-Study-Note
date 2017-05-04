@@ -8,5 +8,6 @@
 
 --$ lua main.lua
 
+
 input = io.read("*l")
 print(input)
