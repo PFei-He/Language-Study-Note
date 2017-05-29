@@ -13,7 +13,7 @@
 
 - (int (^)(int))add:(int)x
 {
-    return ^(int y){
+    return ^(int y) {
         return x + y;
     };
 }
