@@ -2,7 +2,7 @@
 //  Block.h
 //  o
 //
-//  Created by Fay on 2017/5/8.
+//  Created by Fay on 2017/5/31.
 //  Copyright © 2017年 Fay. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @interface Block : NSObject
 
-- (void)say:(void (^)(NSString *string))block;
+- (void)say:(NSString *(^)(NSString *string))block;
 
 
 @end

@@ -2,7 +2,7 @@
 //  Block.m
 //  o
 //
-//  Created by Fay on 2017/5/8.
+//  Created by Fay on 2017/5/31.
 //  Copyright © 2017年 Fay. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 
 @implementation Block
 
-- (void)say:(void (^)(NSString *))block
+- (void)say:(NSString *(^)(NSString *))block
 {
-    block(@"Hello World!");
+    NSLog(@"%@", block(@"Hello World!"));
 }
 
 
