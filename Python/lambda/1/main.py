@@ -1,5 +1,5 @@
 def add(x):
-    return lambda y : x + y
+    return lambda y: x + y
 
 addx = add(8)
 

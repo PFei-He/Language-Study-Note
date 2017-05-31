@@ -6,8 +6,7 @@
  * Time: 下午4:50
  */
 
-
-    function add($x) {
+ 	function add($x) {
        return function ($y) use ($x) {
            return $x + $y;
        } ;

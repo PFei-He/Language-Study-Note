@@ -6,7 +6,6 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-
 function add(x)
     return function(y)
         return x + y
