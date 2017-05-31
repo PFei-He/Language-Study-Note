@@ -10,6 +10,6 @@ fun main(args: Array<String>) {
 
 fun add(x: Int): (y: Int) -> Int {
     return { y: Int ->
-        x+y
+        x + y
     }
 }
