@@ -1,19 +1,21 @@
 /**
- * Created by fay on 2017/5/9.
+ * Created by fay on 2017/5/31.
  */
+
 public class main {
     public static void main(String args[]) {
         main main = new main();
-        System.out.println(main.add(8).add(10));
+        main.say((s) -> {
+            System.out.println(s);
+            return "Hello Java!";
+        });
     }
 
-    lambda add(int x) {
-       return (y) -> {
-           return x + y;
-       };
+    void say(Lambda lambda) {
+        System.out.println(lambda.function("Hello World!"));
     }
 }
 
-interface lambda {
-    int add(int y);
+interface Lambda {
+    String function(String string);
 }

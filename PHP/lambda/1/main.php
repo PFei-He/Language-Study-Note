@@ -2,16 +2,19 @@
 /**
  * Created by IntelliJ IDEA.
  * User: fay
- * Date: 2017/5/8
- * Time: 下午4:50
+ * Date: 2017/5/31
+ * Time: 下午3:47
  */
 
- 	function add($x) {
-       return function ($y) use ($x) {
-           return $x + $y;
-       } ;
+    function main() {
+        say(function ($v) {
+            echo $v;
+            return "Hello PHP!\n";
+        });
     }
 
-    $addx = add(8);
+    function say($lambda) {
+        echo $lambda("Hello World!\n");
+    }
 
-    echo $addx(10);
+    main();

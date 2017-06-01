@@ -2,11 +2,17 @@
 use strict;
 use warnings FATAL => 'all';
 
-sub add {
-    my $x = shift;
-    return sub { shift() + $x };
+sub main {
+    say(sub {
+        my $v = shift;
+        print $v;
+        return "Hello Perl!\n"
+    });
 }
 
-my $addx = add(8);
+sub say {
+    my $v = shift;
+    print $v->("Hello World!\n");
+}
 
-print $addx->(10)."\n";
+main();

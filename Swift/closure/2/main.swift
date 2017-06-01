@@ -1,18 +1,18 @@
 //
 //  main.swift
-//  S
+//  s
 //
-//  Created by Fay on 2017/5/8.
+//  Created by Fay on 2017/5/26.
 //  Copyright © 2017年 Fay. All rights reserved.
 //
 
 import Foundation
 
-
-func add(_ x: Int) -> (_ y: Int) -> Int {
-    return { (y) in
-        return x + y
-    }
+func say(_ closure: (_ string: String) -> String) {
+    print(closure("Hello World!"))
 }
 
-print(add(8)(10))
+say { (string) in
+    print(string)
+    return "Hello Swift!"
+}

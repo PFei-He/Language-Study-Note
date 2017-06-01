@@ -1,17 +1,22 @@
 --
 -- Created by IntelliJ IDEA.
 -- User: fay
--- Date: 2017/5/8
--- Time: 下午4:21
+-- Date: 2017/5/31
+-- Time: 下午3:19
 -- To change this template use File | Settings | File Templates.
 --
 
-function add(x)
-    return function(y)
-        return x + y
-    end
+function main()
+    say(lambda)
 end
 
-addx = add(8)
+lambda = function(v)
+    print(v)
+    return "Hello Lua!"
+end
 
-print(addx(10))
+function say(lambda)
+    print(lambda("Hello World!"))
+end
+
+main()

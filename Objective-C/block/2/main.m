@@ -1,18 +1,21 @@
 //
 //  main.m
-//  O
+//  o
 //
-//  Created by Fay on 2017/5/8.
+//  Created by Fay on 2017/5/31.
 //  Copyright © 2017年 Fay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "B.h"
+#import "Block.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        B *b = [[B alloc] init];
-        NSLog(@"%d", [b add:8](10));
+        Block *b = [[Block alloc] init];
+        [b say:^NSString *(NSString *string) {
+            NSLog(@"%@", string);
+            return @"Hello Objective-C!";
+        }];
     }
     return 0;
 }

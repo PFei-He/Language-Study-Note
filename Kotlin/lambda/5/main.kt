@@ -1,15 +1,14 @@
-import sun.awt.shell.ShellFolder.invoke
-
 /**
- * Created by fay on 2017/5/25.
+ * Created by fay on 2017/5/29.
  */
 
 fun main(args: Array<String>) {
-    println(add(8)(10))
+    say {
+        println(it)
+        "Hello Kotlin!"
+    }
 }
 
-fun add(x: Int): (y: Int) -> Int {
-    return { y: Int ->
-        x + y
-    }
+fun say(lambda: (String) -> String) {
+    println(lambda("Hello World!"))
 }

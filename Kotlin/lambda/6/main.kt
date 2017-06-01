@@ -5,7 +5,7 @@
 fun main(args: Array<String>) {
     say {
         println(it)
-        "Hello Kotlin!"
+        return@say "Hello Kotlin!"
     }
 }
 

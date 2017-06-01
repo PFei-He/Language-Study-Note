@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(add(8)(10))
+	say(func(string string) string {
+		fmt.Println(string)
+		return "Hello Go!"
+	})
 }
 
-func add(x int) func (y int) int {
-	return func (y int) int {
-		return x + y
-	}
+func say(literal func(string string) string)  {
+	fmt.Println(literal("Hello World!"))
 }

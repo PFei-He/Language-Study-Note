@@ -1,5 +1,5 @@
 //
-//  B.h
+//  OC.h
 //  O
 //
 //  Created by Fay on 2017/5/8.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface B : NSObject
+@interface OC : NSObject
 
 
 - (int (^)(int))add:(int)x;
