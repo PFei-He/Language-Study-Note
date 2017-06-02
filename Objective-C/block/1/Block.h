@@ -10,7 +10,7 @@
 
 @interface Block : NSObject
 
-- (void)say:(void (^)(NSString *string))reply;
+- (void)say:(void (^)(NSString *content))reply;
 
 
 @end
