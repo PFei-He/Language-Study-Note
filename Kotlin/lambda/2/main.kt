@@ -8,6 +8,6 @@ fun main(args: Array<String>) {
     }
 }
 
-fun say(lambda: (string: String) -> Unit) {
-    lambda("Hello World!")
+fun say(reply: (string: String) -> Unit) {
+    reply("Hello World!")
 }

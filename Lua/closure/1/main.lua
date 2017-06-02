@@ -7,16 +7,16 @@
 --
 
 function main()
-    say(lambda)
+    say(reply)
 end
 
-lambda = function(v)
-    print(v)
+reply = function(content)
+    print(content)
     return "Hello Lua!"
 end
 
-function say(lambda)
-    print(lambda("Hello World!"))
+function say(reply)
+    print(reply("Hello World!"))
 end
 
 main()

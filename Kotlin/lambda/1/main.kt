@@ -3,11 +3,11 @@
  */
 
 fun main(args: Array<String>) {
-    say { string: String ->
-        println(string)
+    say { content: String ->
+        println(content)
     }
 }
 
-fun say(lambda: (string: String) -> Unit) {
-    lambda("Hello World!")
+fun say(reply: (string: String) -> Unit) {
+    reply("Hello World!")
 }

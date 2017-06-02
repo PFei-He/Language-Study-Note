@@ -3,14 +3,14 @@
  */
 
 function main() {
-    say(function (string) {
-        console.log(string);
+    say(function (content) {
+        console.log(content);
         return "Hello JavaScript!";
     })
 }
 
-function say(closure) {
-    console.log(closure("Hello World!"));
+function say(reply) {
+    console.log(reply("Hello World!"));
 }
 
 main();

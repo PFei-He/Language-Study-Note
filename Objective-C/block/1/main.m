@@ -12,8 +12,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Block *b = [[Block alloc] init];
-        [b say:^(NSString *string) {
-            NSLog(@"%@", string);
+        [b say:^(NSString *content) {
+            NSLog(@"%@", content);
         }];
     }
     return 0;

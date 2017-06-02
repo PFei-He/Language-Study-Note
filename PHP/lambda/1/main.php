@@ -7,14 +7,14 @@
  */
 
     function main() {
-        say(function ($v) {
-            echo $v;
+        say(function ($content) {
+            echo $content;
             return "Hello PHP!\n";
         });
     }
 
-    function say($lambda) {
-        echo $lambda("Hello World!\n");
+    function say($reply) {
+        echo $reply("Hello World!\n");
     }
 
     main();

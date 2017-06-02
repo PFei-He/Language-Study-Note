@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	say(func(string string) {
-		fmt.Println(string)
+	say(func(content string) {
+		fmt.Println(content)
 	})
 }
 
-func say(literal func(string string))  {
-	literal("Hello World!")
+func say(reply func(content string))  {
+	reply("Hello World!")
 }

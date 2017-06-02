@@ -1,11 +1,11 @@
 def main():
-    say(l)
+    say(reply)
 
-def l(string):
-    print string
+def reply(content):
+    print content
     return "Hello Python!"
 
-def say(v):
-    print v("Hello World!")
+def say(reply):
+    print reply("Hello World!")
 
 main()

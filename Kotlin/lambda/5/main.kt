@@ -9,6 +9,6 @@ fun main(args: Array<String>) {
     }
 }
 
-fun say(lambda: (String) -> String) {
-    println(lambda("Hello World!"))
+fun say(reply: (String) -> String) {
+    println(reply("Hello World!"))
 }

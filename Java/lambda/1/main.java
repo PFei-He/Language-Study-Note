@@ -5,14 +5,14 @@
 public class main {
     public static void main(String args[]) {
         main main = new main();
-        main.say((s) -> System.out.println(s));
+        main.say((content) -> System.out.println(content));
     }
 
-    void say(Lambda lambda) {
-        lambda.function("Hello World!");
+    void say(Reply reply) {
+        reply.r("Hello World!");
     }
 }
 
-interface Lambda {
-    void function(String string);
+interface Reply {
+    void r(String content);
 }

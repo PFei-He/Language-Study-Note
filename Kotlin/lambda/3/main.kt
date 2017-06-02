@@ -3,12 +3,12 @@
  */
 
 fun main(args: Array<String>) {
-    say { string: String ->
-        println(string)
+    say { content: String ->
+        println(content)
         return@say "Hello Kotlin!"
     }
 }
 
-fun say(lambda: (string: String) -> String) {
-    println(lambda("Hello World!"))
+fun say(reply: (string: String) -> String) {
+    println(reply("Hello World!"))
 }

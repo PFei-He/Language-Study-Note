@@ -10,9 +10,9 @@
 
 @implementation Block
 
-- (void)say:(NSString *(^)(NSString *))block
+- (void)say:(NSString *(^)(NSString *))reply
 {
-    NSLog(@"%@", block(@"Hello World!"));
+    NSLog(@"%@", reply(@"Hello World!"));
 }
 
 

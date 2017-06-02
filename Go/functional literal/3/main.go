@@ -9,6 +9,6 @@ func main() {
 	})
 }
 
-func say(reply func(content string) string)  {
+func say(reply func(string) string)  {
 	fmt.Println(reply("Hello World!"))
 }

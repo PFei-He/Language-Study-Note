@@ -5,17 +5,17 @@
 public class main {
     public static void main(String args[]) {
         main main = new main();
-        main.say((s) -> {
-            System.out.println(s);
+        main.say((content) -> {
+            System.out.println(content);
             return "Hello Java!";
         });
     }
 
-    void say(Lambda lambda) {
-        System.out.println(lambda.function("Hello World!"));
+    void say(Reply reply) {
+        System.out.println(reply.r("Hello World!"));
     }
 }
 
-interface Lambda {
-    String function(String string);
+interface Reply {
+    String r(String content);
 }
