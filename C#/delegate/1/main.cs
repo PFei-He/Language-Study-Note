@@ -1,11 +1,11 @@
 using System;
-
-public class Test
+ 
+public class M
 {
     public static void Main()
     {
-        Test test = new Test();
-        test.Say( content => {
+        M m = new M();
+        m.Say( content => {
             Console.WriteLine(content);
             return "Hello C#!";
         });
