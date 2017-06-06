@@ -6,7 +6,7 @@ sub main {
     say(sub {
         my $content = shift;
         print $content;
-        return "Hello Perl!\n"
+        return "Hello Perl!\n";
     });
 }
 
