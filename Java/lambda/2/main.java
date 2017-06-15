@@ -12,10 +12,10 @@ public class main {
     }
 
     void say(Reply reply) {
-        System.out.println(reply.r("Hello World!"));
+        System.out.println(reply.f("Hello World!"));
     }
 }
 
 interface Reply {
-    String r(String content);
+    String f(String string);
 }

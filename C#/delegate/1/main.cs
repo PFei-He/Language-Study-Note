@@ -15,5 +15,5 @@ public class M
         Console.WriteLine(reply("Hello World!"));
     }
     
-    delegate String Reply(String r);
+    delegate String Reply(String s);
 }

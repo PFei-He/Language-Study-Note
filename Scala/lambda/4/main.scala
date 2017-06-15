@@ -12,7 +12,7 @@ object main {
 
   def say(reply: ((String) => Unit) => Unit) = {
     println("Hello World!")
-    reply{ content =>
+    reply { content =>
       println(content)
     }
   }

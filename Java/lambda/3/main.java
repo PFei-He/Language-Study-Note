@@ -17,5 +17,5 @@ public class main {
 }
 
 interface Reply {
-    String f(String content);
+    String f(String string);
 }

@@ -9,10 +9,10 @@ public class main {
     }
 
     void say(Reply reply) {
-        reply.r("Hello World!");
+        reply.f("Hello World!");
     }
 }
 
 interface Reply {
-    void r(String content);
+    void f(String string);
 }
