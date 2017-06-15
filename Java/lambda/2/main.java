@@ -4,8 +4,8 @@
 
 public class main {
     public static void main(String args[]) {
-        main main = new main();
-        main.say((content) -> {
+        main m = new main();
+        m.say((content) -> {
             System.out.println(content);
             return "Hello Java!";
         });

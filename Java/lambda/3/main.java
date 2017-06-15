@@ -4,18 +4,18 @@
 
 public class main {
     public static void main(String args[]) {
-        main main = new main();
-        main.say( content -> {
+        main m = new main();
+        m.say(content -> {
             System.out.println(content);
             return "Hello Java!";
         });
     }
 
     void say(Reply reply) {
-        System.out.println(reply.r("Hello World!"));
+        System.out.println(reply.f("Hello World!"));
     }
 }
 
 interface Reply {
-    String r(String content);
+    String f(String content);
 }

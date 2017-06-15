@@ -3,8 +3,8 @@
  */
 public class main {
     public static void main(String args[]) {
-        main main = new main();
-        System.out.println(main.add(8).add(10));
+        main m = new main();
+        System.out.println(m.add(8).add(10));
     }
 
     lambda add(int x) {

@@ -8,6 +8,6 @@ func main() {
 	})
 }
 
-func say(reply func(content string))  {
+func say(reply func (content string))  {
 	reply("Hello World!")
 }
