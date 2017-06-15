@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	say(func(content string) {
+	say(func (content string) {
 		fmt.Println(content)
 	})
 }
