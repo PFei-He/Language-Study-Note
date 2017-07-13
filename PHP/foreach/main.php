@@ -6,7 +6,8 @@
  * Time: 下午5:54
  */
 
-    $arr = range(0, 9);
-    foreach ($arr as $i) {
-        echo $i."\n";
-    }
+//$array = range(0, 9);
+$array = ["1", "2"];
+foreach ($array as $i) {
+    echo $i."\n";
+}
