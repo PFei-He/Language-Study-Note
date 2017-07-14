@@ -1,5 +1,13 @@
 JavaScript
 
+### 特点
+---
+##### 文件后缀
+---
+* `.js`
+
+### 目录
+---
 * [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/currying)
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/foreach)
 * [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/hash)
