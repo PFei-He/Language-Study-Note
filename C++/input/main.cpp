@@ -8,9 +8,6 @@
 
 #include <iostream>
 
-//$ g++ main.cpp
-//$ ./a.out
-
 int main(int argc, const char * argv[]) {
     std::string string;
     std::cin >> string;

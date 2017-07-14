@@ -1,4 +1,5 @@
 Objective-C
+===
 
 ### 特点
 ---
@@ -6,6 +7,13 @@ Objective-C
 ---
 * `.h`
 * `.m`
+
+##### 编译命令
+---
+```
+	$ gcc -framework Foundation main.m
+	$ ./a.out
+```
 
 ### 目录
 ---

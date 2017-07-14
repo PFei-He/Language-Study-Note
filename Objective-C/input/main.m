@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-
 //#ifdef DEBUG
 //#define NSLog(...) NSLog(__VA_ARGS__)
 //#else
 //#define NSLog(...)
 //#endif
-
 
 //#ifdef DEBUG
 //#define NSLog(FORMAT, ...) fprintf(stderr, "%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
@@ -22,11 +20,7 @@
 //#define NSLog(...)
 //#endif
 
-
 #define NSLog(FORMAT, ...) fprintf(stderr, "%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-
-//$ gcc -framework Foundation main.m
-//$ ./a.out
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

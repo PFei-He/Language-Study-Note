@@ -11,8 +11,8 @@ C
 ##### 编译命令
 ---
 ```
-$ gcc main.c
-$ ./a.out
+	$ gcc main.c
+	$ ./a.out
 ```
 
 ### 目录

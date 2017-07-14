@@ -8,7 +8,5 @@
 
 import Foundation
 
-//$ swift main.swift
-
 var input = readLine()
 print(input!)

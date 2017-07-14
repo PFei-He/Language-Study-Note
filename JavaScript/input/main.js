@@ -2,8 +2,6 @@
  * Created by fay on 2017/5/3.
  */
 
-//$ node main.js
-
 var stdin = process.openStdin();
 stdin.addListener("data", function(input) {
     // note:  input is an object, and when converted to a string it will
@@ -12,7 +10,6 @@ stdin.addListener("data", function(input) {
     console.log(input.toString().trim());
     process.exit(0);
 });
-
 
 // var readline = require('readline');
 // var rl = readline.createInterface(process.stdin, process.stdout);
