@@ -3,6 +3,7 @@
  */
 
 array = ['1', '2'];
+console.log(array);
 for (var i in array) {
     console.log(array[i]);
 }

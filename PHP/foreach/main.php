@@ -8,6 +8,7 @@
 
 //$array = range(0, 9);
 $array = ["1", "2"];
+echo $array;
 foreach ($array as $i) {
     echo $i."\n";
 }

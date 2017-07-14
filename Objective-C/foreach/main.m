@@ -11,6 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *array = @[@1, @2];
+        NSLog(@"%@", array);
         for (NSNumber *i in array) {
             NSLog(@"%@", i);
         }

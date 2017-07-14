@@ -8,8 +8,9 @@
 
 import Foundation
 
-var array = [1, 2]
-print(array)
-for i in array {
-    print(i)
+var dictionary = ["a": "1", "b": "2"]
+print(dictionary)
+for i in dictionary {
+    print(i.key)
+    print(i.value)
 }

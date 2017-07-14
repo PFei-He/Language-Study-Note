@@ -11,6 +11,7 @@
 
 ### 目录
 ---
+以下列出部分例子，全部内容请点进语言下查看。
 
 ##### [C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
 ---
@@ -48,6 +49,15 @@
 	}
 ```
 
+* foreach
+```go
+	array := [5] int {1, 2, 3, 4, 5}
+	fmt.Println(array)
+	for i := range array {
+		fmt.Println(i)
+	}
+```
+
 ##### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
 ---
 * Hello World
@@ -63,6 +73,15 @@
 ```javascript
 	function say() {
 		console.log("Hello World!");
+	}
+```
+
+* foreach
+```javascript
+	array = ['1', '2'];
+	console.log(array);
+	for (var i in array) {
+    	console.log(array[i]);
 	}
 ```
 
@@ -94,12 +113,30 @@
 	}
 ```
 
+* foreach
+```objective-c
+	NSArray *array = @[@1, @2];
+	NSLog(@"%@", array);
+    for (NSNumber *i in array) {
+        NSLog(@"%@", i);
+    }
+```
+
 ##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
 * Hello World
 ```perl
 	sub say {
 		print "Hello World!\n";
+	}
+```
+
+* foreach
+```perl
+	my @array = ('1', '2');
+	print "@array\n";
+	foreach my $i (@array) {
+    	print "$i\n";
 	}
 ```
 
@@ -112,6 +149,15 @@
 	}
 ```
 
+* foreach
+```php
+	$array = ["1", "2"];
+	echo $array;
+	foreach ($array as $i) {
+    	echo $i."\n";
+	}
+```
+
 ##### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
 ---
 * Hello World
@@ -120,12 +166,29 @@
 		print "Hello World!"
 ```
 
+* foreach
+```python
+	array = ["1", "2"]
+	print array
+	for i in array:
+    	print i
+```
+
 ##### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
 * Hello World
 ```ruby
 	def say()
 		puts "Hello World!"
+	end
+```
+
+* foreach
+```ruby
+	array = ["1", "2"]
+	puts array
+	array.each do |i|
+  		puts i
 	end
 ```
 
@@ -153,6 +216,15 @@
 ```swift
 	func say() {
 		print("Hello World!")
+	}
+```
+
+* foreach
+```swift
+	var array = [1, 2]
+	print(array)
+	for i in array {
+    	print(i)
 	}
 ```
 
