@@ -33,7 +33,7 @@
 * Hello World
 ```c
 
-	printf("Hello World!");
+	printf("Hello World!\n");
 ```
 
 ##### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
