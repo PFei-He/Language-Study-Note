@@ -15,7 +15,7 @@
 
 ##### [C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23/Hello%20World)
 ```c#
 	void say() {
 		Console.WriteLine("Hello World!");
@@ -24,7 +24,7 @@
 
 ##### [C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/Hello%20World)
 ```c++
 	void say() {
 		std::cout << "Hello World!" << std::endl;
@@ -33,7 +33,7 @@
 
 ##### [C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C/Hello%20World)
 ```c
 	void say() {
 		printf("Hello World!\n");
@@ -42,7 +42,7 @@
 
 ##### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/Hello%20World)
 ```go
 	func say() {
 		fmt.Println("Hello World!")
@@ -60,7 +60,7 @@
 
 ##### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/Hello%20World)
 ```java
 	void say() {
 		System.out.println("Hello World!");
@@ -69,7 +69,7 @@
 
 ##### [JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/Hello%20World)
 ```javascript
 	function say() {
 		console.log("Hello World!");
@@ -87,7 +87,7 @@
 
 ##### [Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/Hello%20World)
 ```kotlin
 	fun say() {
 		println("Hello World!")
@@ -96,7 +96,7 @@
 
 ##### [Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/Hello%20World)
 ```lua
 	function say()
 		print "Hello World!\n"
@@ -105,7 +105,7 @@
 
 ##### [Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/Hello%20World)
 ```objective-c
 	- (void)say 
 	{
@@ -124,7 +124,7 @@
 
 ##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/Hello%20World)
 ```perl
 	sub say {
 		print "Hello World!\n";
@@ -142,7 +142,7 @@
 
 ##### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/Hello%20World)
 ```php
 	function say() {
 		echo "Hello World!\n";
@@ -160,7 +160,7 @@
 
 ##### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/Hello%20World)
 ```python
 	def say():
 		print "Hello World!"
@@ -176,7 +176,7 @@
 
 ##### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/Hello%20World)
 ```ruby
 	def say()
 		puts "Hello World!"
@@ -194,7 +194,7 @@
 
 ##### [Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/Hello%20World)
 ```rust
 	fn say() {
 		println!("Hello World!");
@@ -203,7 +203,7 @@
 
 ##### [Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/Hello%20World)
 ```scala
 	def say(): Unit = {
 		println("Hello World!")
@@ -212,7 +212,7 @@
 
 ##### [Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/Hello%20World)
 ```swift
 	func say() {
 		print("Hello World!")
@@ -230,6 +230,6 @@
 
 ##### [TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>
 ---
-* Hello World
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript/Hello%20World)
 ```typescript
 ```
