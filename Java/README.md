@@ -4,12 +4,10 @@ Java
 ### 特点
 ---
 ##### 文件后缀
----
 * `.class`
 * `.java`
 
 ##### 编译命令
----
 ```
 	$ javac main.java
 	$ java main

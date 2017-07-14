@@ -4,12 +4,10 @@ Objective-C
 ### 特点
 ---
 ##### 文件后缀
----
 * `.h`
 * `.m`
 
 ##### 编译命令
----
 ```
 	$ gcc -framework Foundation main.m
 	$ ./a.out
