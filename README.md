@@ -16,128 +16,144 @@
 ---
 * Hello World
 ```c#
-
-	Console.WriteLine("Hello World!");
+	void say() {
+		Console.WriteLine("Hello World!");
+	}
 ```
 
 ##### [C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
 ---
 * Hello World
 ```c++
-
-	std::cout << "Hello World!" << std::endl;
+	void say() {
+		std::cout << "Hello World!" << std::endl;
+	}
 ```
 
 ##### [C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
 ---
 * Hello World
 ```c
-
-	printf("Hello World!\n");
+	void say() {
+		printf("Hello World!\n");
+	}
 ```
 
 ##### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
 ---
 * Hello World
 ```go
-	
-	fmt.Println("Hello World!")
+	func say() {
+		fmt.Println("Hello World!")
+	}
 ```
 
 ##### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
 ---
 * Hello World
 ```java
-
-	System.out.println("Hello World!");
+	void say() {
+		System.out.println("Hello World!");
+	}
 ```
 
 ##### [JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
 ---
 * Hello World
 ```javascript
-
-	console.log("Hello World!");
+	function say() {
+		console.log("Hello World!");
+	}
 ```
 
 ##### [Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
 ---
 * Hello World
 ```kotlin
-
-	println("Hello World!")
+	fun say() {
+		println("Hello World!")
+	}
 ```
 
 ##### [Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
 ---
 * Hello World
 ```lua
-
-	print "Hello World!\n"
+	function say()
+		print "Hello World!\n"
+	end
 ```
 
 ##### [Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
 ---
 * Hello World
-```objective-C
-
-   	NSLog(@"Hello World!");
-```
-
-##### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
----
-* Hello World
-```php
-
-	echo "Hello World!\n";
+```objective-c
+	- (void)say 
+	{
+		NSLog(@"Hello World!");
+	}
 ```
 
 ##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
 * Hello World
 ```perl
+	sub say {
+		print "Hello World!\n";
+	}
+```
 
-	print "Hello World!\n";
+##### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
+---
+* Hello World
+```php
+	function say() {
+		echo "Hello World!\n";
+	}
 ```
 
 ##### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
 ---
 * Hello World
 ```python
-
-	print "Hello World!"
+	def say():
+		print "Hello World!"
 ```
 
 ##### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
 * Hello World
 ```ruby
-
-	puts "Hello World!"
+	def say()
+		puts "Hello World!"
+	end
 ```
 
 ##### [Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
 ---
 * Hello World
 ```rust
-
-	println!("Hello World!");
+	fn say() {
+		println!("Hello World!");
+	}
 ```
 
 ##### [Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
 ---
 * Hello World
 ```scala
-
-	println("Hello World!")
+	def say(): Unit = {
+		println("Hello World!")
+	}
 ```
 
 ##### [Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
 ---
 * Hello World
 ```swift
-
-	print("Hello World!")
+	func say() {
+		print("Hello World!")
+	}
 ```
 
 ##### [TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>
