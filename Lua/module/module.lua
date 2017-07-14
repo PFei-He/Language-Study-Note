@@ -6,11 +6,10 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-
 local _M = {}
 
 function _M.sayHi()
-print("Hello World!")
+    print("Hello World!")
 end
 
 return _M

@@ -2,13 +2,14 @@
 //  main.swift
 //  s
 //
-//  Created by Fay on 2017/5/5.
+//  Created by Fay on 2017/7/14.
 //  Copyright © 2017年 Fay. All rights reserved.
 //
 
 import Foundation
 
-
-for i in 0..<10 {
+var array = [1, 2]
+print(array)
+for i in array {
     print(i)
 }

@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var arr[10] int
-	for i := range arr {
+	var array[10] int
+	fmt.Println(array)
+	for i := range array {
 		fmt.Println(i)
 	}
 }

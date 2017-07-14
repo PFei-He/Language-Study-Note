@@ -8,6 +8,5 @@
 
 --$ lua main.lua
 
-
 m = require("module")
 m.sayHi()
