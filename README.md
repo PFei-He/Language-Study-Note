@@ -49,7 +49,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/foreach)
 ```go
 	array := [5] int {1, 2, 3, 4, 5}
 	fmt.Println(array)
@@ -76,7 +76,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/foreach)
 ```javascript
 	array = ['1', '2'];
 	console.log(array);
@@ -113,7 +113,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/foreach)
 ```objective-c
 	NSArray *array = @[@1, @2];
 	NSLog(@"%@", array);
@@ -131,7 +131,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/foreach)
 ```perl
 	my @array = ('1', '2');
 	print "@array\n";
@@ -149,7 +149,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/foreach)
 ```php
 	$array = ["1", "2"];
 	echo $array;
@@ -166,7 +166,7 @@
 		print "Hello World!"
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/foreach)
 ```python
 	array = ["1", "2"]
 	print array
@@ -183,7 +183,7 @@
 	end
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/foreach)
 ```ruby
 	array = ["1", "2"]
 	puts array
@@ -219,7 +219,7 @@
 	}
 ```
 
-* foreach
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/foreach)
 ```swift
 	var array = [1, 2]
 	print(array)
