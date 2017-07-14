@@ -8,9 +8,6 @@
 
 #include <stdio.h>
 
-//$ gcc main.c
-//$ ./a.out
-
 int main(int argc, const char * argv[]) {
     char c[0];
     scanf("%s", c);
