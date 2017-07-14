@@ -9,20 +9,20 @@
 
 ### 目录
 ---
-[C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23)
-[C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B)
-[C](https://github.com/PFei-He/Language-Study-Note/tree/master/C)
-[Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go)
-[Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java)
-[JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript)
-[Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin)
-[Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua)
-[Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C)
-[PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP)
-[Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl)
-[Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python)
-[Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby)
-[Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust)
-[Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala)
-[Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift)
-[TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript)
+[C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
+[C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
+[C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
+[Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
+[Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
+[JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
+[Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
+[Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
+[Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
+[PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
+[Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
+[Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
+[Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
+[Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
+[Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
+[Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
+[TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>
