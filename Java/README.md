@@ -15,4 +15,9 @@ Java
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/array)
+* [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/currying)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/Hello%20World)
+* [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/import)
+* [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/input)
+* [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/lambda%20-%20interface)

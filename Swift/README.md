@@ -13,4 +13,10 @@ Swift
 
 ### 目录
 ---
+* [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/currying)
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/foreach)
+* [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/Hello%20World)
+* [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/import)
+* [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/input)
+* [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/lambda%20-%20closure)
