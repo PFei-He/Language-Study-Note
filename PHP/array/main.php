@@ -6,5 +6,5 @@
  * Time: 下午6:05
  */
 
-    $arr = [1, 2, 3, 4, 5];
-    print_r($arr);
+$array = [1, 2, 3, 4, 5];
+print_r($array);
