@@ -33,18 +33,18 @@
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/Hello%20World)
 ```c++
-	void say() {
-		std::cout << "Hello World!" << std::endl;
-	}
+    void say() {
+        std::cout << "Hello World!" << std::endl;
+    }
 ```
 
 ##### [C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C/Hello%20World)
 ```c
-	void say() {
-		printf("Hello World!\n");
-	}
+    void say() {
+        printf("Hello World!\n");
+    }
 ```
 
 ##### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
