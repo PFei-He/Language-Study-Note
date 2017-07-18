@@ -125,7 +125,7 @@
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/Hello%20World)
 ```lua
     function say()
-        print "Hello World!\n"
+        print "Hello World!"
     end
 ```
 
