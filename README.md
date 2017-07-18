@@ -42,79 +42,109 @@
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/Hello%20World)
 ```go
-	func say() {
-		fmt.Println("Hello World!")
-	}
+    func say() {
+        fmt.Println("Hello World!")
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/foreach)
 ```go
-	array := [5] int {1, 2, 3, 4, 5}
-	fmt.Println(array)
-	for i := range array {
-		fmt.Println(i)
-	}
+    array := [2] int {1, 2}
+    fmt.Println(array)
+    for i := range array {
+        fmt.Println(i)
+    }
 ```
 
 ##### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/Hello%20World)
 ```java
-	void say() {
-		System.out.println("Hello World!");
-	}
+    void say() {
+        System.out.println("Hello World!");
+    }
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/foreach)
+```java
+    int[] array = {1, 2};
+    System.out.println(array);
+    for (int i: array) {
+        System.out.println(i);
+    }
 ```
 
 ##### [JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/Hello%20World)
 ```javascript
-	function say() {
-		console.log("Hello World!");
-	}
+    function say() {
+        console.log("Hello World!");
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/foreach)
 ```javascript
-	array = ['1', '2'];
-	console.log(array);
-	for (var i in array) {
-    	console.log(array[i]);
-	}
+    array = ['1', '2'];
+    console.log(array);
+    for (var i in array) {
+        console.log(array[i]);
+    }
 ```
 
 ##### [Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/Hello%20World)
 ```kotlin
-	fun say() {
-		println("Hello World!")
-	}
+    fun say() {
+        println("Hello World!")
+    }
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/foreach)
+```kotlin
+    fun main(args: Array<String>) {
+        val array = arrayOf(1, 2)
+        array.forEach {
+            println(it)
+        }
+    }
 ```
 
 ##### [Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/Hello%20World)
 ```lua
-	function say()
-		print "Hello World!\n"
-	end
+    function say()
+        print "Hello World!\n"
+    end
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/foreach)
+```lua
+    local array = {1, 2}
+    print(array)
+    for i,j in pairs(array) do
+        print(i)
+        print(j)
+    end
+
 ```
 
 ##### [Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/Hello%20World)
 ```objective-c
-	- (void)say 
-	{
-		NSLog(@"Hello World!");
-	}
+    - (void)say 
+    {
+        NSLog(@"Hello World!");
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/foreach)
 ```objective-c
-	NSArray *array = @[@1, @2];
-	NSLog(@"%@", array);
+    NSArray *array = @[@1, @2];
+    NSLog(@"%@", array);
     for (NSNumber *i in array) {
         NSLog(@"%@", i);
     }
@@ -123,107 +153,115 @@
 ##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/Hello%20World)
-```perl
-	sub say {
-		print "Hello World!\n";
-	}
+```perl5
+    sub say {
+        print "Hello World!\n";
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/foreach)
-```perl
-	my @array = ('1', '2');
-	print "@array\n";
-	foreach my $i (@array) {
-    	print "$i\n";
-	}
+```perl5
+    my @array = ('1', '2');
+    print "@array\n";
+    foreach my $i (@array) {
+        print "$i\n";
+    }
 ```
 
 ##### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/Hello%20World)
 ```php
-	function say() {
-		echo "Hello World!\n";
-	}
+    function say() {
+        echo "Hello World!\n";
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/foreach)
 ```php
-	$array = ["1", "2"];
-	echo $array;
-	foreach ($array as $i) {
-    	echo $i."\n";
-	}
+    $array = ["1", "2"];
+    echo $array;
+    foreach ($array as $i) {
+        echo $i."\n";
+    }
 ```
 
 ##### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/Hello%20World)
 ```python
-	def say():
-		print "Hello World!"
+    def say():
+        print "Hello World!"
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/foreach)
 ```python
-	array = ["1", "2"]
-	print array
-	for i in array:
-    	print i
+    array = ["1", "2"]
+    print array
+    for i in array:
+        print i
 ```
 
 ##### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/Hello%20World)
 ```ruby
-	def say()
-		puts "Hello World!"
-	end
+    def say()
+      puts "Hello World!"
+    end
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/foreach)
 ```ruby
-	array = ["1", "2"]
-	puts array
-	array.each do |i|
-  		puts i
-	end
+    array = ["1", "2"]
+    puts array
+    array.each do |i|
+      puts i
+    end
 ```
 
 ##### [Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/Hello%20World)
 ```rust
-	fn say() {
-		println!("Hello World!");
-	}
+    fn say() {
+        println!("Hello World!");
+    }
 ```
 
 ##### [Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/Hello%20World)
 ```scala
-	def say(): Unit = {
-		println("Hello World!")
-	}
+    def say(): Unit = {
+      println("Hello World!")
+    }
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/foreach)
+```scala
+    val array = Array(1, 2)
+    for (i <- array) {
+      println(i)
+    }
 ```
 
 ##### [Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/Hello%20World)
 ```swift
-	func say() {
-		print("Hello World!")
-	}
+    func say() {
+        print("Hello World!")
+    }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/foreach)
 ```swift
-	var array = [1, 2]
-	print(array)
-	for i in array {
-    	print(i)
-	}
+    var array = [1, 2]
+    print(array)
+    for i in array {
+        print(i)
+    }
 ```
 
 ##### [TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>

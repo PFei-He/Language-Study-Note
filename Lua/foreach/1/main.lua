@@ -8,7 +8,7 @@
 
 local array = {1, 2}
 print(array)
-for i, j in pairs(array) do
+for i,j in pairs(array) do
     print(i)
     print(j)
 end
