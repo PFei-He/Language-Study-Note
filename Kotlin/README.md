@@ -13,9 +13,9 @@ Kotlin
 
 ### 目录
 ---
-* [curring](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/array)
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/array)
 * [curring](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/currying)
-* [curring](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/hash)
+* [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/Hello%20World)
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/input)

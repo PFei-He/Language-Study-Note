@@ -1,9 +1,7 @@
 using System;
  
-public class M
-{
-    public static void Main()
-    {
+public class M {
+    public static void Main() {
         M m = new M();
         m.Say( end => {
             Console.WriteLine("Hello C#!");

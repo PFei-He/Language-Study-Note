@@ -9,7 +9,7 @@ public class main {
     }
 
     lambda add(int x) {
-       return (y) -> {
+       return y -> {
            return x + y;
        };
     }

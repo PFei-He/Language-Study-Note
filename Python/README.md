@@ -13,4 +13,11 @@ Python
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/array)
+* [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/currying)
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/foreach)
+* [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/Hello%20World)
+* [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/import)
+* [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/input)
+* [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/lambda%20-%20closure)

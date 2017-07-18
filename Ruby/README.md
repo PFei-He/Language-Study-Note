@@ -13,4 +13,11 @@ Ruby
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/array)
+* [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/currying)
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/foreach)
+* [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/Hello%20World)
+* [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/import)
+* [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/input)
+* [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/lambda%20-%20closure)

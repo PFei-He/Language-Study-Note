@@ -14,10 +14,19 @@
 ##### [C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23/Hello%20World)
-```c#
-	void say() {
-		Console.WriteLine("Hello World!");
-	}
+```cs
+    void say() {
+        Console.WriteLine("Hello World!");
+    }
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23/foreach)
+```cs
+    int[] array = {1, 2};
+    Console.WriteLine(array);
+    foreach (int i in array) {
+        Console.WriteLine(i);
+    }
 ```
 
 ##### [C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
