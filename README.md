@@ -189,7 +189,7 @@
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/foreach)
 ```php
     $array = ["1", "2"];
-    echo $array;
+    echo $array."\n";
     foreach ($array as $i) {
         echo $i."\n";
     }
