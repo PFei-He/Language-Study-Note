@@ -162,14 +162,14 @@
 ##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/Hello%20World)
-```perl5
+```perl
     sub say {
         print "Hello World!\n";
     }
 ```
 
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/foreach)
-```perl5
+```perl
     my @array = ('1', '2');
     print "@array\n";
     foreach my $i (@array) {
