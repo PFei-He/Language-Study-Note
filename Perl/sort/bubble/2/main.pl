@@ -13,8 +13,8 @@ sub swap {
 
 sub bubble_sort {
     my (@array) = @_;
-    for my $i ( 0 .. $#array ) {
-        for my $j ( 0 .. $#array - 1 - $i ) {
+    for my $i (0 .. $#array) {
+        for my $j (0 .. $#array - 1 - $i) {
             swap $array[$j], $array[$j + 1]
                 if $array[$j] > $array[$j + 1];
         }
