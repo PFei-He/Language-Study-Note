@@ -2,7 +2,6 @@ package package;
 use strict;
 use warnings FATAL => 'all';
 
-
 sub new {
     my $class = shift @_ || __PACKAGE__;
     my $self = {};

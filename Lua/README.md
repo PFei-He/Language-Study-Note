@@ -13,6 +13,7 @@ Lua
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/array%20-%20table)
 * [coroutine](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/coroutine)
 * [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/currying)
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/foreach)

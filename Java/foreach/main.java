@@ -5,7 +5,7 @@
 public class main {
     public static void main(String args[]) {
         int[] array = {1, 2};
-        System.out.println(array);
+        System.out.println(Arrays.toString(array));
         for (int i: array) {
             System.out.println(i);
         }
