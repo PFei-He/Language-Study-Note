@@ -15,6 +15,7 @@ Python
 ---
 * [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/array)
 * [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/currying)
+* [file](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/file)
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/foreach)
 * [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/Hello%20World)
