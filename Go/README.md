@@ -22,3 +22,4 @@ Go
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/lambda%20-%20functional%20literal)
 * [oop](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/oop)
 * [slice](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/slice)
+* [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/sort)

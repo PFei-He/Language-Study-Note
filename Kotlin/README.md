@@ -15,8 +15,10 @@ Kotlin
 ---
 * [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/array)
 * [curring](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/currying)
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/foreach)
 * [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/Hello%20World)
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/lambda%20-%20closure)
+* [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/sort)

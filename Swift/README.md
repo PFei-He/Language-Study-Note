@@ -13,6 +13,7 @@ Swift
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/array)
 * [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/currying)
 * [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/foreach)
 * [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/hash)
@@ -20,3 +21,4 @@ Swift
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/lambda%20-%20closure)
+* [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/sort)

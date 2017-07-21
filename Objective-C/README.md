@@ -15,4 +15,12 @@ Objective-C
 
 ### 目录
 ---
+* [array](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/array)
+* [currying](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/currying)
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/foreach)
+* [hash](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/hash)
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/Hello%20World)
+* [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/import)
+* [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/input)
+* [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/lambda%20-%20block)
+* [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/sort)
