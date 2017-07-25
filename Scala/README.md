@@ -21,4 +21,5 @@ Scala
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/sort)

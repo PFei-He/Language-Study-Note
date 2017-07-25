@@ -21,4 +21,5 @@ Kotlin
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/sort)

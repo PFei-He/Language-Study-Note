@@ -18,3 +18,5 @@ C
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C/Hello%20World)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/C/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/C/lambda%20-%20function%20pointer)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/C/recursive%20algorithm)
+* [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/C/sort)

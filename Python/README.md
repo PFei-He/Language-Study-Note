@@ -22,4 +22,5 @@ Python
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/sort)

@@ -21,4 +21,5 @@ Ruby
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/sort)

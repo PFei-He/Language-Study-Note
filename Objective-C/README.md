@@ -23,4 +23,5 @@ Objective-C
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/lambda%20-%20block)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/sort)

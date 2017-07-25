@@ -23,4 +23,5 @@ Lua
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/lambda)
 * [oop](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/oop)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/sort)

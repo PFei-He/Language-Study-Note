@@ -21,4 +21,5 @@ Swift
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/sort)

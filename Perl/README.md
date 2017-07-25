@@ -26,6 +26,7 @@ Perl
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/lambda%20-%20closure)
 * [method](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/method)
 * [package](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/package)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/recursive%20algorithm)
 * [shift](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/shift)
 * [shift operation](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/shift%20operation)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/sort)

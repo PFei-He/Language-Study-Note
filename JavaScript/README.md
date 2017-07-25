@@ -21,4 +21,5 @@ JavaScript
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/sort)

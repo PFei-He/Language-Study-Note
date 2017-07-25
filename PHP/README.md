@@ -21,4 +21,5 @@ PHP
 * [import](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/import)
 * [input](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/input)
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/lambda%20-%20closure)
+* [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/sort)
