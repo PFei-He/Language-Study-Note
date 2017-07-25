@@ -3,6 +3,9 @@ Scala
 
 ### 特点
 ---
+##### 主页
+* `https://www.scala-lang.org/`
+
 ##### 文件后缀
 * `.scala`
 

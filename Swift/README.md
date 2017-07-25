@@ -3,6 +3,10 @@ Swift
 
 ### 特点
 ---
+##### 主页
+* `https://swift.org/`
+* `https://developer.apple.com/swift/`
+
 ##### 文件后缀
 * `.swift`
 

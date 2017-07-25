@@ -3,6 +3,9 @@ Java
 
 ### 特点
 ---
+##### 主页
+* `https://www.java.com/`
+
 ##### 文件后缀
 * `.class`
 * `.java`

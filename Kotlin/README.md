@@ -3,6 +3,9 @@ Kotlin
 
 ### 特点
 ---
+##### 主页
+* `https://kotlinlang.org/`
+
 ##### 文件后缀
 * `.kt`
 

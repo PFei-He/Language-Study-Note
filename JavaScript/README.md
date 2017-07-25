@@ -3,6 +3,9 @@ JavaScript
 
 ### 特点
 ---
+##### 主页
+* `https://www.javascript.com/`
+
 ##### 文件后缀
 * `.js`
 

@@ -3,6 +3,9 @@ Rust
 
 ### 特点
 ---
+##### 主页
+* `https://www.rust-lang.org/`
+
 ##### 文件后缀
 * `.rs`
 
