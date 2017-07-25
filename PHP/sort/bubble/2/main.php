@@ -23,4 +23,4 @@ function swap(&$array, $i, $j) {
 }
 
 $array = array(2, 1, 3, 5, 4);
-echo join(' ', bubbleSort($array));
+echo join(' ', bubbleSort($array))."\n";

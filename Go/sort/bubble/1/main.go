@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	array := sort.IntSlice{2, 1, 3, 5, 4}
-	fmt.Println(bubbleSort(array))
+	slice := sort.IntSlice{2, 1, 3, 5, 4}
+	fmt.Println(bubbleSort(slice))
 }
 
 func bubbleSort(slice sort.Interface) sort.Interface {
