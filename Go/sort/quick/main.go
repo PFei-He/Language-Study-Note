@@ -13,10 +13,10 @@ func quickSort(slice []int) []int {
 	if len(slice) <= 1 {
 		return slice
 	}
-	mid, i := slice[0], 1
+	pivot, i := slice[0], 1
 	left, right := 0, len(slice) - 1
 	for i = 1; i <= right; {
-		if slice[i] > mid {
+		if slice[i] > pivot {
 			slice[i], slice[right] = slice[right], slice[i]
 			right--
 		} else {
@@ -25,7 +25,7 @@ func quickSort(slice []int) []int {
 			i++
 		}
 	}
-	slice[left] = mid
+	slice[left] = pivot
 	quickSort(slice[:left])
 	quickSort(slice[left+1:])
 

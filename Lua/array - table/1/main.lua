@@ -6,12 +6,12 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-function print_r(arr, indentLevel)
+function print_r(array, indentLevel)
     local str = ""
     local indentStr = "#"
 
     if(indentLevel == nil) then
-        print(print_r(arr, 0))
+        print(print_r(array, 0))
         return
     end
 
@@ -19,7 +19,7 @@ function print_r(arr, indentLevel)
         indentStr = indentStr.."\t"
     end
 
-    for index,value in pairs(arr) do
+    for index,value in pairs(array) do
         if type(value) == "table" then
             str = str..indentStr..index..": \n"..print_r(value, (indentLevel + 1))
         else

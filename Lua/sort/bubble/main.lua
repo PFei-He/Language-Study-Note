@@ -7,25 +7,25 @@
 --
 
 function main()
-    local table = {2, 1, 3, 5, 4}
-    print_t(bubbleSort(table))
+    local array = {2, 1, 3, 5, 4}
+    printA(bubbleSort(array))
 end
 
-function bubbleSort(table)
-    for i = 1, #table do
-        for j = 1, #table - i do
-            if table[j + 1] and table[j] > table[j + 1] then
-                table[j + 1], table[j] = table[j], table[j + 1]
+function bubbleSort(array)
+    for i = 1, #array do
+        for j = 1, #array - i do
+            if array[j + 1] and array[j] > array[j + 1] then
+                array[j + 1], array[j] = array[j], array[j + 1]
             end
         end
     end
-    return table
+    return array
 end
 
-function print_t(table)
+function printA(array)
     local string = ""
-    for i = 1,#table do
-        string = string .. table[i] .. " "
+    for i = 1, #array do
+        string = string .. array[i] .. " "
     end
     print(string)
 end

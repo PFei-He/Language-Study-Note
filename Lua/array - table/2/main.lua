@@ -6,13 +6,13 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-function print_t(table)
+function printA(array)
     local string = ""
-    for i = 1,#table do
-        string = string .. table[i] .. " "
+    for i = 1, #array do
+        string = string .. array[i] .. " "
     end
     print(string)
 end
 
-local table = {1, 2, 3, 4, 5}
-print_t(table)
+local array = {1, 2, 3, 4, 5}
+printA(array)
