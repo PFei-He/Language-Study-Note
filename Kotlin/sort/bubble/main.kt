@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
 }
 
 fun bubbleSort(array: Array<Int>): Array<Int> {
-    var swapped: Boolean
+    var swapped : Boolean
     do {
         swapped = false
         for (i in 0..array.size - 2) {
