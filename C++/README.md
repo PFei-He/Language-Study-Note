@@ -21,3 +21,4 @@ C++
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/lambda%20-%20function%20pointer)
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/variable%20parametric)
