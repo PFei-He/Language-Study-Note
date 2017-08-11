@@ -33,3 +33,4 @@ Perl
 * [shift](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/shift)
 * [shift operation](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/shift%20operation)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/variable%20parametric)

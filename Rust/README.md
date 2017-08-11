@@ -22,3 +22,4 @@ Rust
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/lambda%20-%20closure)
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/variable%20parametric)
