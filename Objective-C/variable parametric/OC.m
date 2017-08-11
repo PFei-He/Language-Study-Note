@@ -10,18 +10,17 @@
 
 @implementation OC
 
-+ (void)mainWithValues:(NSString *)values, ...
++ (void)mainWithValues:(NSString *)value, ...
 {
-    NSLog(@"%@", values);
+    NSLog(@"%@", value);
     va_list list;
-    va_start(list, values);
-    while (values != nil) {
+    va_start(list, value);
+    while (value != nil) {
         NSString *string = va_arg(list, NSString *);
         if (!string) break;
         NSLog(@"%@", string);
     }
     va_end(list);
 }
-
 
 @end

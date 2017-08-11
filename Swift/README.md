@@ -27,3 +27,4 @@ Swift
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/lambda%20-%20closure)
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/variable%20parametric)

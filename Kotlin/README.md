@@ -26,3 +26,4 @@ Kotlin
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/lambda%20-%20closure)
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/variable%20parametric)

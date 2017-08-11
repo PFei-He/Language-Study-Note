@@ -28,3 +28,4 @@ Java
 * [lambda](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/lambda%20-%20interface)
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/recursive%20algorithm)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/variable%20parametric)

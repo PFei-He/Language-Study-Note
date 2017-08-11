@@ -27,3 +27,4 @@ Go
 * [recursive](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/recursive%20algorithm)
 * [slice](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/slice)
 * [sort](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/sort)
+* [variable parametric](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/variable%20parametric)
