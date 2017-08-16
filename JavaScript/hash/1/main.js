@@ -3,10 +3,12 @@
  */
 
 var map = new Map();
-map.set('a', '1');
-map.set('b', '2');
+map.set('A', 1);
+map.set('B', 2);
+map.set('C', 3);
 console.log(map);
 console.log(map.keys());
 console.log(map.values());
-console.log(map.get('a'));
-console.log(map.get('b'));
+console.log(map.get('A'));
+console.log(map.get('B'));
+console.log(map.get('C'));

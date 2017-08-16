@@ -6,7 +6,7 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-local hash = {["A"] = "1", ["B"] = "2", ['C'] = '3'}
+local hash = {['A'] = '1', ["B"] = "2", ["C"] = "3"}
 print(hash)
 print(hash["A"])
 print(hash["B"])

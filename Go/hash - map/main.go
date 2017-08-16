@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	m := map [string] string {
-		"a": "1",
-		"b": "2",
+	m := map [string] int {
+		"A": 1,
+		"B": 2,
+		"C": 3,
 	}
 	fmt.Println(m)
-	fmt.Println(m["a"])
-	fmt.Println(m["b"])
+	fmt.Println(m["A"])
+	fmt.Println(m["B"])
+	fmt.Println(m["C"])
 }
