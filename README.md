@@ -6,7 +6,8 @@
 ---
 
 ### 关于
-此笔记只是本人学习过程中的一点知识归集，并不一定会列出所有语言的所有知识点，也不会对语言进行任何介绍，目前是学懂一点，记录一点，欢迎各位童鞋一起来记录，也欢迎转给更多的人学习。
+此笔记只是本人学习过程中的一点知识归集，并不一定会列出所有语言的所有知识点，也不会对语言进行任何介绍，目前是学懂一点，记录一点，欢迎各位童鞋一起来记录，也欢迎转给更多的人学习。<br><br>
+由于学习语言不可避免的要在真正工程中使用，为学习时能更真切的学到语言在实际项目中的应用，此笔记会上传一些实际工程项目中不涉及版权问题及企业机密的代码片段或文件以便学习。
 
 ### 目录
 以下列出部分例子，全部内容请点进语言下查看。
@@ -277,4 +278,14 @@
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript/Hello%20World)
 ```typescript
+    class HelloWorld {
+        constructor(public msg : string) {}
+        
+        say() {
+            return this.msg;    
+        }
+    }
+    
+    var helloWorld = new HelloWorld("HelloWorld");
+    console.log(helloWorld.say());
 ```

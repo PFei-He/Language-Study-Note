@@ -1,55 +1,59 @@
 //
 //  Code180111.m
-//  D
+//  O
 //
 //  Created by Fay on 2018/1/11.
-//  Copyright © 2018年 Sino. All rights reserved.
+//  Copyright © 2018年 Fay. All rights reserved.
 //
 
 #import "Code180111.h"
 
 @implementation Code180111
 
-- (UIViewController *)getCurrentVC
+//获取当前的视图控制器
+- (UIViewController *)currentViewController
 {
-    UIViewController *result = nil;
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    //app默认windowLevel是UIWindowLevelNormal，如果不是，找到UIWindowLevelNormal的
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
+    UIViewController *viewController = nil;
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    
+    // 默认的windowLevel是UIWindowLevelNormal，如果不是，找到UIWindowLevelNormal的
+    if (keyWindow.windowLevel != UIWindowLevelNormal) {
         NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
+        for (UIWindow *window in windows) {
+            if (window.windowLevel == UIWindowLevelNormal) {
+                keyWindow = window;
                 break;
             }
         }
     }
-    id  nextResponder = nil;
-    UIViewController *appRootVC=window.rootViewController;
-    //    如果是present上来的appRootVC.presentedViewController 不为nil
-    if (appRootVC.presentedViewController) {
-        nextResponder = appRootVC.presentedViewController;
-    }else{
-        UIView *frontView = [[window subviews] objectAtIndex:0];
+    
+    id nextResponder = nil;
+    UIViewController *rootViewController = keyWindow.rootViewController;
+    
+    // 如果是present上来的，rootViewController.presentedViewController不为nil
+    if (rootViewController.presentedViewController) {
+        nextResponder = rootViewController.presentedViewController;
+    } else {
+        UIView *frontView = [[keyWindow subviews] objectAtIndex:0];
         nextResponder = [frontView nextResponder];
     }
     
-    if ([nextResponder isKindOfClass:[UITabBarController class]]){
-        UITabBarController * tabbar = (UITabBarController *)nextResponder;
-        UINavigationController * nav = (UINavigationController *)tabbar.viewControllers[tabbar.selectedIndex];
-        //        UINavigationController * nav = tabbar.selectedViewController ; 上下两种写法都行
-        result=nav.childViewControllers.lastObject;
+    // p.s. 避免拿到的ViewController是TabBarController或者NavigationController，需要做判断排除
+    if ([nextResponder isKindOfClass:[UITabBarController class]]) {// 如果当前是TabBarController
+        UITabBarController *tabBarController = (UITabBarController *)nextResponder;
         
-    }else if ([nextResponder isKindOfClass:[UINavigationController class]]){
-        UIViewController * nav = (UIViewController *)nextResponder;
-        result = nav.childViewControllers.lastObject;
-    }else{
-        result = nextResponder;
+        UINavigationController *navigationController = (UINavigationController *)tabBarController.viewControllers[tabBarController.selectedIndex];
+//        UINavigationController *navigationController = tabBarController.selectedViewController;
+        
+        viewController = navigationController.childViewControllers.lastObject;
+    } else if ([nextResponder isKindOfClass:[UINavigationController class]]) {// 如果当前是NavigationController
+        UIViewController *navigationController = (UIViewController *)nextResponder;
+        viewController = navigationController.childViewControllers.lastObject;
+    } else {
+        viewController = nextResponder;
     }
-    return result;
+    
+    return viewController;
 }
 
 @end
