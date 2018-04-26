@@ -8,7 +8,7 @@ public class main {
     }
 
     static void print(String ... values) {
-        for (String v: values) {
+        for (String v : values) {
             System.out.println(v);
         }
     }
