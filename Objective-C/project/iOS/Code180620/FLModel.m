@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 
 @implementation FLModel (Log)
 
-#pragma mark - Private Methods (Log)
+#pragma mark - Private Methods
 
 - (void)debugLog:(FLModelLog)log
 {
@@ -103,7 +103,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 
 @implementation FLModel (Property)
 
-#pragma mark - Private Methods (Property)
+#pragma mark - Private Methods
 
 //获取属性列表
 - (NSArray *)getPropertyList:(Class)cls
@@ -130,7 +130,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 
 @implementation FLModel (JSON)
 
-#pragma mark - Private Methods (JSON)
+#pragma mark - Private Methods
 
 ///解析JSON
 - (void)parseJSON:(id)JSON
@@ -210,7 +210,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 
 @implementation FLModel (XML)
 
-#pragma mark - Private Methods (XML)
+#pragma mark - Private Methods
 
 ///解析XML
 - (void)parseXML:(id)XML
@@ -250,7 +250,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 }
 
 
-#pragma mark - NSXMLParserDelegate Methods
+#pragma mark - NSXMLParserDelegate Implementation
 
 //读取节点头
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict
