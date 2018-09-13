@@ -25,7 +25,7 @@ def main
 end
 
 def say
-  puts "Hello World!"
+  puts 'Hello World!'
 end
 
 main
