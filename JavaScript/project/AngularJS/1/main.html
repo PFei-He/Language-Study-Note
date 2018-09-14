@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!--
+ Copyright (c) 2018 faylib.top
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+
+<html lang="en">
+
+<!-- HTML 的 head -->
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 网页标题 -->
+    <title>Index</title>
+</head>
+
+<!-- HTML 的 body -->
+<body>
+
+    <!-- 导入文件 -->
+    <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <!-- 绑定 Angular -->
+    <!--<div ng-app="Case1">-->
+        <!--&lt;!&ndash; 添加文本 / 使用 controller 控件 &ndash;&gt;-->
+        <!--<div ng-controller="controller">-->
+
+            <!--&lt;!&ndash; 绑定 text 参数 &ndash;&gt;-->
+            <!--{{ data.text }}-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+    <!-- 绑定 Angular -->
+    <div ng-app="Case2">
+
+        <!-- 添加文本 / 使用 controller 控件 -->
+        <div ng-controller="controller">
+            <!-- 绑定 text 参数 -->
+            <span ng-bind="data.text"></span>
+
+            <!-- 执行 say() 方法 -->
+            <button ng-click="say()">Say!</button>
+        </div>
+    </div>
+</body>
+</html>
