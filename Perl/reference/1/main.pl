@@ -20,11 +20,27 @@
 # THE SOFTWARE.
 #
 
+#!/usr/bin/perl
+use strict;
+use warnings FATAL => 'all';
 
-def main():
-    array = ['1', '2']
-    print array
-    array.append('3')
-    print array
+#my $bar = "Perl";
+#my $foo = \$bar;
+#print $$foo."\n";
 
-main()
+#my @bar = ("P", "e", "r", "l");
+#my $foo = \@bar;
+#print "@$foo\n";
+
+#my %bar = ("P" => "P", "e" => "e", "r" => "r", "l" => "l");
+#my $foo = \%bar;
+#print %$foo, "\n";
+
+sub bar
+{
+    print "Hi\n";
+}
+my $foo = \&bar;
+$foo->();
+#print $foo->();
+#print &$foo, "\n";

@@ -20,11 +20,17 @@
 # THE SOFTWARE.
 #
 
+#!/usr/bin/perl
+use strict;
+use warnings FATAL => 'all';
 
-def main():
-    array = ['1', '2']
-    print array
-    array.append('3')
-    print array
-
-main()
+sub foo
+{
+    my $var = shift;
+    $$var = '1';
+}
+my $foo = '2';
+my $var = \$foo;
+print $$var."\n";
+foo ($var);
+print $foo."\n";

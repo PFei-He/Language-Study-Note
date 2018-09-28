@@ -22,9 +22,8 @@
 
 
 def main():
-    array = ['1', '2']
-    print array
-    array.append('3')
+    array = [1, 2, 3, 4, 5]
+    array.reverse()
     print array
 
 main()

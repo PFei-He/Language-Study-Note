@@ -20,11 +20,6 @@
 # THE SOFTWARE.
 #
 
-
-def main():
-    array = ['1', '2']
-    print array
-    array.append('3')
-    print array
-
-main()
+array = [1, 2, 3, 4, 5]
+array.reverse!
+puts array

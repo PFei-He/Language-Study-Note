@@ -1,0 +1,11 @@
+.sky {
+    color:white;
+    background-color:lightblue;
+    padding:20px;
+    font-family:"Courier New";
+}
+.tomato {
+    background-color:coral;
+    padding:40px;
+    font-family:Verdana;
+}

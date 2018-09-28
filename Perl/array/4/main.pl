@@ -20,11 +20,10 @@
 # THE SOFTWARE.
 #
 
+#!/usr/bin/perl
+use strict;
+use warnings FATAL => 'all';
+use 5.010;
 
-def main():
-    array = ['1', '2']
-    print array
-    array.append('3')
-    print array
-
-main()
+my @array = qw(1 2 3 4 5);
+say join ' 0 ', @array;
