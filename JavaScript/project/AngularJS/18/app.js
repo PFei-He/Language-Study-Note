@@ -28,5 +28,8 @@ angular.module("A", []).controller("C", function($scope) {
     };
     $scope.c = function () {
         $scope.show = true;
+        if ($scope.input1 === "" || $scope.input2 === "") {
+            alert("请输入")
+        }
     }
 });
