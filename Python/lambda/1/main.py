@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2018 faylib.top
+# Copyright (c) 2019 faylib.top
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -26,11 +26,12 @@ def main():
 
 
 def reply(v):
-    print v
+    print(v)
     return "Hello Python!"
 
 
 def say(f):
-    print f("Hello World!")
+    print(f("Hello World!"))
+
 
 main()

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
 {
     UIViewController *viewController = nil;
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-    
+
     // 默认的windowLevel是UIWindowLevelNormal，如果不是，找到UIWindowLevelNormal的
     if (keyWindow.windowLevel != UIWindowLevelNormal) {
         NSArray *windows = [[UIApplication sharedApplication] windows];
@@ -40,10 +40,10 @@
             }
         }
     }
-    
+
     id nextResponder = nil;
     UIViewController *rootViewController = keyWindow.rootViewController;
-    
+
     // 如果是present上来的，rootViewController.presentedViewController不为nil
     if (rootViewController.presentedViewController) {
         nextResponder = rootViewController.presentedViewController;
@@ -51,14 +51,14 @@
         UIView *frontView = [[keyWindow subviews] objectAtIndex:0];
         nextResponder = [frontView nextResponder];
     }
-    
+
     // p.s. 避免拿到的ViewController是TabBarController或者NavigationController，需要做判断排除
     if ([nextResponder isKindOfClass:[UITabBarController class]]) {// 如果当前是TabBarController
         UITabBarController *tabBarController = (UITabBarController *)nextResponder;
-        
+
         UINavigationController *navigationController = (UINavigationController *)tabBarController.viewControllers[tabBarController.selectedIndex];
 //        UINavigationController *navigationController = tabBarController.selectedViewController;
-        
+
         viewController = navigationController.childViewControllers.lastObject;
     } else if ([nextResponder isKindOfClass:[UINavigationController class]]) {// 如果当前是NavigationController
         UIViewController *navigationController = (UIViewController *)nextResponder;
@@ -66,7 +66,7 @@
     } else {
         viewController = nextResponder;
     }
-    
+
     return viewController;
 }
 

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -38,9 +38,9 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        char c[0];
-        scanf("%s", c);
-        NSLog(@"%@", [NSString stringWithCString:c encoding:NSUTF8StringEncoding]);
+        char input[0];
+        scanf("%s", input);
+        NSLog(@"%@", [NSString stringWithCString:input encoding:NSUTF8StringEncoding]);
     }
     return 0;
 }

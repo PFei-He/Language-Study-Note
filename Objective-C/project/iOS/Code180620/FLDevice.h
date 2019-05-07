@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,28 +26,28 @@
 
 /**
  系统版本号
- 
+
  @return 系统版本号
  */
 + (NSString *)systemVersion;
 
 /**
  应用版本号
- 
+
  @return 应用版本号
  */
 + (NSString *)appVersion;
 
 /**
  应用构建号
- 
+
  @return 应用构建号
  */
 + (NSString *)appBuildVersion;
 
 /**
  应用更新检测
- 
+
  @param serverVersion 服务器的应用版本号
  @return 应用是否有可用更新
  */
@@ -55,14 +55,14 @@
 
 /**
  越狱检测
- 
+
  @return 设备是否处于越狱状态
  */
 + (BOOL)isJailbroken;
 
 /**
  调试模式
- 
+
  @param openOrNot 打开或关闭
  */
 + (void)debugMode:(BOOL)openOrNot;

@@ -9,8 +9,8 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    std::string string;
-    std::cin >> string;
-    std::cout << string << std::endl;
+    std::string input;
+    std::cin >> input;
+    std::cout << input << std::endl;
     return 0;
 }

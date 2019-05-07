@@ -278,7 +278,7 @@
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript/Hello%20World)
 ```typescript
-    class HelloWorld {
+    class Main {
         constructor(public msg : string) {}
         
         say() {
@@ -286,6 +286,6 @@
         }
     }
     
-    var helloWorld = new HelloWorld("HelloWorld");
-    console.log(helloWorld.say());
+    var main = new Main("Hello World!");
+    console.log(main.say());
 ```

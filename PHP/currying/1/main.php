@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2018 faylib.top
+ * Copyright (c) 2019 faylib.top
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,12 +21,12 @@
  * THE SOFTWARE.
  */
 
- 	function add($x) {
-       return function ($y) use ($x) {
-           return $x + $y;
-       } ;
-    }
+function add($x) {
+    return function ($y) use ($x) {
+        return $x + $y;
+    } ;
+}
 
-    $addx = add(8);
+$addx = add(8);
 
-    echo $addx(10);
+echo $addx(10);

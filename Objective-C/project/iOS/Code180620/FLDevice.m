@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ static BOOL DEBUG_MODE = NO;
 + (BOOL)isJailbroken
 {
 #if !(TARGET_IPHONE_SIMULATOR)
-    
+
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/Cydia.app"] ||
         [[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/MobileSubstrate.dylib"] ||
         [[NSFileManager defaultManager] fileExistsAtPath:@"/bin/bash"] ||
@@ -85,7 +85,7 @@ static BOOL DEBUG_MODE = NO;
         [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"cydia://package/com.example.package"]]) {
         return YES;
     }
-    
+
     FILE *f = NULL;
     if ((f = fopen("/bin/bash", "r")) ||
         (f = fopen("/Applications/Cydia.app", "r")) ||
@@ -96,18 +96,18 @@ static BOOL DEBUG_MODE = NO;
         return YES;
     }
     fclose(f);
-    
+
     NSError *error;
     NSString *stringToBeWritten = @"This is a test.";
     [stringToBeWritten writeToFile:@"/private/jailbreak.txt" atomically:YES encoding:NSUTF8StringEncoding error:&error];
     [[NSFileManager defaultManager] removeItemAtPath:@"/private/jailbreak.txt" error:nil];
-    
+
     if(error == nil) {
         return YES;
     }
-    
+
 #endif
-    
+
     return NO;
 }
 

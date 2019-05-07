@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2018 faylib.top
+# Copyright (c) 2019 faylib.top
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +23,7 @@
 
 def main():
     array = [1, 2, 3, 4, 5]
-    print array
+    print(array)
+
 
 main()

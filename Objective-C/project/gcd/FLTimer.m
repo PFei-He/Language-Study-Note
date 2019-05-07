@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -66,7 +66,7 @@
     if (queue == nil) {
         queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     }
-    
+
     // 计时器
     dispatch_source_t timer = [FLTimer sharedInstance].timerContainer[name];
     if (!timer) {

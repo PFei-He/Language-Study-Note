@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 faylib.top
+ * Copyright (c) 2019 faylib.top
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String string = scanner.next();
-        System.out.println(string);
+        String input = scanner.next();
+        System.out.println(input);
     }
 }

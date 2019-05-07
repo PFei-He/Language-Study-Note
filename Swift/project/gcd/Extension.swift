@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,32 +23,32 @@
 import Foundation
 
 public extension DispatchQueue {
-    
+
     private static var onceToken = [String]()
-    
-    
+
+
     // MARK: Public Methods
-    
+
     public class func once(file: String = #file, function: String = #function, line: Int = #line, execute: () -> Void) {
         let token = file + ":" + function + ":" + String(line)
         once(token: token, execute: block)
     }
-    
+
     /**
      Executes a block of code, associated with a unique token, only once.  The code is thread safe and will
      only execute the code once even in the presence of multithreaded calls.
-     
+
      - parameter token: A unique reverse DNS style name such as com.vectorform.<name> or a GUID
      - parameter block: Block to execute once
      */
     public class func once(token: String, execute: () -> Void) {
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }
-        
+
         if onceToken.contains(token) {
             return
         }
-        
+
         onceToken.append(token)
         block()
     }

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,9 +26,9 @@
 
 /**
  创建提示框
- 
+
  [QuQAlert alertWithMessages:@"标题", @"内容", @"按钮一", ^{NSLog(@"事件一");}, @"按钮二", ^{NSLog(@"事件二");}, nil];
- 
+
  @param message 提示框展示的信息，可变参数。第一个参数为标题，第二个参数为内容，第三个参数开始，奇数为按钮标题，偶数为按钮事件。
  @warning Objective-C语法中，可变参数要以 `nil` 关键字结尾作为最后一个参数，表示结束赋值。
  */
@@ -36,9 +36,9 @@
 
 /**
  弹出提示框
- 
+
  [QuQAlert showAboveController:ViewController withMessages:@"标题", @"内容", @"按钮一", ^{NSLog(@"事件一");}, @"按钮二", ^{NSLog(@"事件二");}, nil];
- 
+
  @param viewController 需要显示提示框的视图控制器。
  @param message 提示框展示的信息，可变参数。第一个参数为标题，第二个参数为内容，第三个参数开始，奇数为按钮标题，偶数为按钮事件。
  @warning Objective-C语法中，可变参数要以 `nil` 关键字结尾作为最后一个参数，表示结束赋值。
@@ -52,9 +52,9 @@ typedef void (^QuQFunction)(void);
 
 /**
  弹出提示框
- 
+
  [QuQAlert showAboveController:ViewController withMessages:@[@"标题", @"内容", @"按钮一", @"按钮二"] callback:^QuQFunction(NSInteger buttonIndex) {return ^{NSLog(@"%ld", (long)buttonIndex);};}];
- 
+
  @param viewController 需要显示提示框的视图控制器。
  @param messages 提示框展示的信息，可变参数。第一个参数为标题，第二个参数为内容，第三个参数开始为按钮标题。
  @param callback 回调按钮的序号。
@@ -64,7 +64,7 @@ typedef void (^QuQFunction)(void);
 
 /**
  调试模式
- 
+
  @param openOrNot 打开或关闭
  */
 + (void)debugMode:(BOOL)openOrNot;

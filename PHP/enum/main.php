@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2018 faylib.top
+ * Copyright (c) 2019 faylib.top
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +22,13 @@
  */
 
 class Color extends SplEnum {
-    const RED = 0;
-    const ORANGE = 1;
-    const YELLOW = 2;
-    const GREEN = 3;
-    const CYAN = 4;
-    const BLUE = 5;
-    const PURPLE = 6;
+    const RED = 1;
+    const ORANGE = 2;
+    const YELLOW = 3;
+    const GREEN = 4;
+    const CYAN = 5;
+    const BLUE = 6;
+    const PURPLE = 7;
 }
 
 function main() {

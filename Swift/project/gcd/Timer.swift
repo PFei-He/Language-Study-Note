@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,22 +23,22 @@
 import Foundation
 
 open class Timer: NSObject {
-    
+
     // 单例
     private static let sharedInstance = Timer()
-    
+
     // 计时器仓库
     private var timerContainer = [String: Any]()
-    
-    
+
+
     // MARK: Private Methods
-    
+
     // 私有化初始化方法
     private override init() {}
-    
-    
+
+
     // MARK: Public Methods
-    
+
     /**
      开始计时器
      - parameters:
@@ -53,7 +53,7 @@ open class Timer: NSObject {
         if queue == nil {
             queue = DispatchQueue.global(qos: .default)
         }
-        
+
         // 计时器
         var timer = Timer.sharedInstance.timerContainer[name] as? DispatchSourceTimer
         if timer == nil {
@@ -64,7 +64,7 @@ open class Timer: NSObject {
         timer?.setEventHandler(handler: action)
         timer?.resume()
     }
-    
+
     /**
      开始计时器
      - parameters:
@@ -86,7 +86,7 @@ open class Timer: NSObject {
             queue?.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(Int(timeInterval)), execute: action)
         }
     }
-    
+
     /**
      暂停计时器
      - parameters:
@@ -98,7 +98,7 @@ open class Timer: NSObject {
         }
         timer.suspend()
     }
-    
+
     /**
      恢复计时器
      - parameters:
@@ -110,7 +110,7 @@ open class Timer: NSObject {
         }
         timer.resume()
     }
-    
+
     /**
      删除计时器
      - parameters:
@@ -123,7 +123,7 @@ open class Timer: NSObject {
         Timer.sharedInstance.timerContainer.removeValue(forKey: name)
         timer.cancel()
     }
-    
+
     /**
      判断计时器是否存在
      - parameters:

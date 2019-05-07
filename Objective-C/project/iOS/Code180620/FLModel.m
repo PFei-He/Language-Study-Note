@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -60,7 +60,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
     if (!DEBUG_MODE) { // 调试模式被关闭
         return;
     }
-    
+
     NSMutableArray *infoArr = [NSMutableArray array];
     [infoArr addObject:info];
     va_list list;
@@ -71,7 +71,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
         [infoArr addObject:arg];
     }
     va_end(list);
-    
+
     if (log == FLModelLogIsNotDataOrDictionary) {
         NSLog(@"[ MODEL ][ ERROR ] The JSON object must be type of 'NSDictionary' or 'NSData'.");
         NSLog(@"[ -> ][ CLASS ] %@", [self classForCoder]);
@@ -111,7 +111,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
     unsigned int propertyCount = 0;
     NSMutableArray *propertyArray = [NSMutableArray array];
     objc_property_t *propertyList = class_copyPropertyList(cls, &propertyCount);
-    
+
     if (propertyList != NULL) {
         for (unsigned int i = 0; i < propertyCount; i++) {
             //获取属性名并存入到数组中
@@ -121,7 +121,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
     }
     //释放对象
     free(propertyList);
-    
+
     return propertyArray;
 }
 
@@ -138,10 +138,10 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
     if ([JSON isKindOfClass:[NSDictionary class]]) {
         //将键值设置为属性（解析JSON）
         [self setValuesForKeysWithDictionary:JSON];
-        
+
         //更改未声明的属性的属性名
         [self undefinedKeyConvert];
-        
+
         //剩余的未声明的属性
         [self undefinedKey];
     } else if ([JSON isKindOfClass:[NSData class]]) {
@@ -150,13 +150,13 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
         if (error) {
             [self debugLog:FLModelLogParseJSONFailure];
         } else {
-            
+
             //将键值设置为属性（解析JSON）
             [self setValuesForKeysWithDictionary:JSON];
-            
+
             //更改未声明的属性的属性名
             [self undefinedKeyConvert];
-            
+
             //剩余的未声明的属性
             [self undefinedKey];
         }
@@ -218,10 +218,10 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
     //节点
     if (!self.elements) self.elements = [[NSMutableArray alloc] init];
     [self.elements addObject:[NSMutableDictionary dictionary]];
-    
+
     //节点名
     if (!self.elementName) self.elementName = [[NSMutableString alloc] init];
-    
+
     //判断数据类型
     if ([XML isKindOfClass:[NSData class]]) {
         if ([self XMLParser:XML]) { //解析XML
@@ -257,11 +257,11 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 {
     //父节点
     NSMutableDictionary *parentElement = [self.elements lastObject];
-    
+
     //子节点
     NSMutableDictionary *childElement = [NSMutableDictionary dictionary];
     [childElement addEntriesFromDictionary:attributeDict];
-    
+
     //将节点转为字典的键值
     id value = parentElement[elementName];
     if (value) {
@@ -284,7 +284,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
     NSMutableDictionary *dictionary = self.elements.lastObject;
-    
+
     if (self.elementName.length > 0) { //剪切字符串，去掉空白和换行
         NSString *string = [self.elementName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [dictionary setObject:string forKey:elementName];
@@ -369,7 +369,7 @@ typedef NS_ENUM(NSUInteger, FLModelLog) {
 {
     //获取类的所有属性
     NSDictionary *propertyDictionary = [NSDictionary dictionaryWithDictionary:[self dictionaryWithValuesForKeys:[self getPropertyList:[self class]]]];
-    
+
     //去除空值
     NSMutableDictionary *JSON = [NSMutableDictionary dictionary];
     for (NSString *key in propertyDictionary) {

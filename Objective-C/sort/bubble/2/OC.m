@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,9 @@
 + (NSArray *)bubbleSort:(NSArray *)array
 {
     NSMutableArray *arr = [NSMutableArray arrayWithArray:array];
-    
+
     BOOL swapped = YES;
-    
+
     while (swapped) {
         swapped = NO;
         for (int i = 1; i < arr.count; i++) {

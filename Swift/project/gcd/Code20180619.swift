@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,8 +31,8 @@ class Code20180619: NSObject {
          1、获得 main queue：main queue 是主线程，即：主线程中执行队列中的各个任务
          2、创建 serial queue：serial queue 不在主线程中执行，系统会开辟一个子线程，在子线程中执行队列中的各个任务
          */
-        
-        
+
+
         // main queue
         let queue = DispatchQueue.main
         queue.async {
@@ -65,8 +65,8 @@ class Code20180619: NSObject {
         queue.async {
             print("第10个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         }
-        
-        
+
+
         // serial queue  p.s. 苹果推荐使用反向域名格式定义队列名字
 //        let queue = DispatchQueue(label: "top.faylib.gcd.queue")
 //        queue.async {
@@ -100,7 +100,7 @@ class Code20180619: NSObject {
 //            print("第10个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
 //        }
     }
-    
+
     // 并行队列
     func concurrentQueue() {
         /*
@@ -108,11 +108,11 @@ class Code20180619: NSObject {
          获得并行队列的方式有两种：
          1、获得 global queue
          2、创建 concurrent queue
-         
+
          p.s. 系统会根据需要开辟若干个线程，并行执行队列中的任务（开始较晚的任务未必最后结束，开始较早的任务未必最先完成），开辟的线程数量取决于多方面因素，比如：任务的数量，系统的内存资源等等，会以最优的方式开辟线程。
          */
-        
-        
+
+
         // global queue
         /*
          1、第一个参数控制队列的优先级，一共有4个优先级：
@@ -120,7 +120,7 @@ class Code20180619: NSObject {
          default
          utility
          background
-         
+
          2、第二个参数是苹果预留参数，未来会用，目前填写为0。
          */
         let queue = DispatchQueue.global(qos: .default)
@@ -154,8 +154,8 @@ class Code20180619: NSObject {
         queue.async {
             print("第10个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         }
-        
-        
+
+
         // concurrent queue
 //        let queue = DispatchQueue(label: "top.faylib.gcd.queue", attributes: .concurrent)
 //        queue.async {
@@ -189,7 +189,7 @@ class Code20180619: NSObject {
 //            print("第10个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
 //        }
     }
-    
+
     // 延迟执行
     func after() {
         let queue = DispatchQueue(label: "top.faylib.gcd.queue", attributes: .concurrent)
@@ -197,7 +197,7 @@ class Code20180619: NSObject {
             print("任务执行完毕，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         })
     }
-    
+
     // 任务等待
     func wait() {
         let group = DispatchGroup()
@@ -206,28 +206,28 @@ class Code20180619: NSObject {
         for i in 0..<100 {
             // 当线程收到信号时，才会继续向下执行，若没有收到信号，程序会永远的等待。
             print(semaphore.wait(timeout: .distantFuture))
-            
+
             queue.async(group: group, execute: DispatchWorkItem {
                 print("第\(i)个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
-                
+
                 // 让程序睡眠3秒（延迟3秒）
                 // sleep(3)
                 Thread.sleep(forTimeInterval: 3)
-                
+
                 // 给线程发送信号
                 semaphore.signal()
             })
         }
-        
+
         // 等待组任务全部完成
         print(group.wait(timeout: .distantFuture))
     }
-    
+
     // 组任务
     func group() {
         let group = DispatchGroup()
         let queue = DispatchQueue(label: "top.faylib.gcd.queue", attributes: .concurrent)
-        
+
         // 把不同任务归为一组
         queue.async(group: group, execute: DispatchWorkItem {
             print("第1个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
@@ -244,13 +244,13 @@ class Code20180619: NSObject {
         queue.async(group: group, execute: DispatchWorkItem {
             print("第5个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         })
-        
+
         // 组任务结束
         group.notify(queue: queue, work: DispatchWorkItem {
             print("组任务执行完毕，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         })
     }
-    
+
     // 插入任务
     func barrier() {
         /*
@@ -260,7 +260,7 @@ class Code20180619: NSObject {
          对于从数据库中读取数据，使用 serial queue 就不太合适了，效率比较低。使用 concurrent queue 无疑是最合适的
          真实的项目中，通常既有对数据库的写入，又有数据库的读取，可以使用 barrier
          */
-        
+
         let queue = DispatchQueue(label: "top.faylib.gcd.queue.", attributes: .concurrent)
         queue.async {
             print("第1个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
@@ -296,7 +296,7 @@ class Code20180619: NSObject {
             print("第10个任务，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
         }
     }
-    
+
     // 多次执行
     func apply() {
         let array = ["1", "2", "3", "4"]
@@ -306,11 +306,11 @@ class Code20180619: NSObject {
             }
         }
     }
-    
+
     // 同步与异步
     func syncOrAsync() {
         let queue = DispatchQueue(label: "top.faylib.gcd.queue", attributes: .concurrent)
-        
+
         // 同步
         queue.sync {
             for i in 0..<10 {
@@ -318,7 +318,7 @@ class Code20180619: NSObject {
             }
         }
         print("任务执行完毕，所在线程：\(Thread.current)，是否是主线程：\(Thread.current.isMainThread)")
-        
+
         // 异步
         queue.async {
             for i in 0..<10 {

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -59,7 +59,7 @@ BOOL FLDetectBlockObject(void *object) {
 + (UIAlertController *)alertFromArray:(NSArray *)array
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:array[0] message:array[1] preferredStyle:UIAlertControllerStyleAlert];
-    
+
     // 检测对象类型
     for (int i = 2; i < array.count; i++) {
         if (i % 2 == 0 && ![array[i] isKindOfClass:[NSString class]]) {
@@ -76,20 +76,20 @@ BOOL FLDetectBlockObject(void *object) {
             return alert;
         }
     }
-    
+
     for (int i = 3; i < array.count; i += 2) {
-        
+
         // 通过Block获取按钮的点击事件并于按钮点击时回调
         void (^callback)(void) = array[i];
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:array[i-1] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [alert dismissViewControllerAnimated:YES completion:NULL];
-            
+
             // 响应按钮点击事件（Block回调）
             callback();
         }];
         [alert addAction:alertAction];
     }
-    
+
     return alert;
 }
 
@@ -100,10 +100,10 @@ BOOL FLDetectBlockObject(void *object) {
 + (UIAlertController *)alertWithMessages:(id)message, ...
 {
     NSMutableArray *allObj = [NSMutableArray array];
-    
+
     // 添加标题到数组
     [allObj addObject:message];
-    
+
     // 添加除标题外的其它参数到数组
     // 获取所有的可变参数
     va_list list;
@@ -113,7 +113,7 @@ BOOL FLDetectBlockObject(void *object) {
         if (!obj) break;
         [allObj addObject:obj];
     }
-    
+
     return [FLAlert alertFromArray:allObj];
 }
 
@@ -121,10 +121,10 @@ BOOL FLDetectBlockObject(void *object) {
 + (void)showAboveController:(UIViewController *)viewController withMessages:(id)message, ...
 {
     NSMutableArray *allObj = [NSMutableArray array];
-    
+
     // 添加标题到数组
     [allObj addObject:message];
-    
+
     // 添加除标题外的其它参数到数组
     // 获取所有的可变参数
     va_list list;
@@ -134,7 +134,7 @@ BOOL FLDetectBlockObject(void *object) {
         if (!obj) break;
         [allObj addObject:obj];
     }
-    
+
     [viewController presentViewController:[FLAlert alertFromArray:allObj] animated:YES completion:NULL];
 }
 
@@ -142,18 +142,18 @@ BOOL FLDetectBlockObject(void *object) {
 + (void)showAboveController:(UIViewController *)viewController withMessages:(NSArray *)messages callback:(QuQFunction (^)(NSInteger))callback
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:messages[0] message:messages[1] preferredStyle:UIAlertControllerStyleAlert];
-    
+
     for (int i = 2; i < messages.count; i++) {
-        
+
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:messages[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [alert dismissViewControllerAnimated:YES completion:NULL];
-            
+
             // 响应按钮点击事件（Block回调）
             callback(i-2)();
         }];
         [alert addAction:alertAction];
     }
-    
+
     [viewController presentViewController:alert animated:YES completion:NULL];
 }
 

@@ -9,8 +9,8 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    char c[0];
-    scanf("%s", c);
-    printf("%s\n", c);
+    char input[0];
+    scanf("%s", input);
+    printf("%s\n", input);
     return 0;
 }

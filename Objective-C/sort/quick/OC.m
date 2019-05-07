@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 faylib.top
+//  Copyright (c) 2019 faylib.top
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
     NSNumber *pivot = array.firstObject;
     NSMutableArray *left = [NSMutableArray array];
     NSMutableArray *right = [NSMutableArray array];
-    
+
     for (NSNumber *v in array) {
         if (v < pivot) {
             [left addObject:v];
@@ -40,12 +40,12 @@
             [right addObject:v];
         }
     }
-    
+
     NSMutableArray *result = [NSMutableArray array];
     [result addObjectsFromArray:[self quickSort:left]];
     [result addObject:pivot];
     [result addObjectsFromArray:[self quickSort:right]];
-    
+
     return [result copy];
 }
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 faylib.top
+ * Copyright (c) 2019 faylib.top
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,13 +21,13 @@
  */
 
 var Color = {
-    RED : 0,
-    ORANGE : 1,
-    YELLOW : 2,
-    GREEN : 3,
-    CYAN : 4,
-    BLUE : 5,
-    PURPLE : 6
+    RED : 1,
+    ORANGE : 2,
+    YELLOW : 3,
+    GREEN : 4,
+    CYAN : 5,
+    BLUE : 6,
+    PURPLE : 7
 };
 
 function main() {
