@@ -28,5 +28,5 @@
 -export([main/0]).
 
 main() -> say(fun reply/1).
-say(F) -> F("Hello World!\n").
-reply(V) -> io:fwrite(V).
+say(Func) -> Func("Hello World!\n").
+reply(Content) -> io:fwrite(Content).

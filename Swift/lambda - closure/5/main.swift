@@ -29,7 +29,7 @@ func say(_ reply: ((String) -> Void) -> Void) {
     }
 }
 
-say { end in
+say { bye in
     print("Hello Swift!")
-    end("^_^")
+    bye("^_^")
 }

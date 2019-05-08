@@ -26,9 +26,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Block *b = [[Block alloc] init];
-        [b say:^(void (^end)(NSString *)) {
+        [b say:^(void (^bye)(NSString *)) {
             NSLog(@"Hello Objective-C!");
-            end(@"^_^");
+            bye(@"^_^");
         }];
     }
     return 0;

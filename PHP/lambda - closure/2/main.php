@@ -22,9 +22,9 @@
  */
 
 function main() {
-    say(function ($end) {
+    say(function ($bye) {
         echo "Hello PHP!\n";
-        $end("^_^");
+        $bye("^_^");
     });
 }
 

@@ -23,24 +23,24 @@
 public class main {
     public static void main(String[] args) {
         main m = new main();
-        m.say(end -> {
+        m.say(bye -> {
             System.out.println("Hello Java!");
-            end.f("^_^");
+            bye.func("^_^");
         });
     }
 
     void say(Reply reply) {
         System.out.println("Hello World!");
-        reply.f(content -> {
+        reply.func(content -> {
             System.out.println(content);
         });
     }
 }
 
-interface End {
-    void f(String string);
+interface Bye {
+    void func(String content);
 }
 
 interface Reply {
-    void f(End end);
+    void func(Bye bye);
 }

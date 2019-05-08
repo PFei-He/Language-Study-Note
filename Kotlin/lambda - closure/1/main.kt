@@ -26,6 +26,6 @@ fun main(args: Array<String>) {
     }
 }
 
-fun say(reply: (string: String) -> Unit) {
+fun say(reply: (content: String) -> Unit) {
     reply("Hello World!")
 }

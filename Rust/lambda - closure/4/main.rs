@@ -20,19 +20,12 @@
  * THE SOFTWARE.
  */
 
-class Main {
-    constructor() {}
-
-    main() {
-        this.say((string) => {
-            console.log(string);
-        });
-    }
-
-    say(reply) {
-        reply("Hello World!");
-    }
+fn main() {
+    say(&|content: String| -> String {
+        println!("{}", content);
+    })
 }
 
-var main = new Main();
-main.main();
+fn say(reply: &Fn(String) -> String) {
+    reply("Hello World!".to_string());
+}

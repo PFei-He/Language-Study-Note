@@ -22,11 +22,11 @@
 
 
 def main():
-    say(lambda v: print(v))
+    say(lambda content: print(content))
 
 
-def say(f):
-    f("Hello World!")
+def say(reply):
+    reply("Hello World!")
 
 
 main()

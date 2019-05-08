@@ -30,10 +30,10 @@ public class main {
     }
 
     void say(Reply reply) {
-        System.out.println(reply.f("Hello World!"));
+        System.out.println(reply.func("Hello World!"));
     }
 }
 
 interface Reply {
-    String f(String string);
+    String func(String content);
 }

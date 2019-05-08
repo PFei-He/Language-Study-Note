@@ -21,9 +21,9 @@
  */
 
 function main() {
-    say(function (end) {
+    say(function (bye) {
         console.log("Hello JavaScript!");
-        end("^_^");
+        bye("^_^");
     })
 }
 

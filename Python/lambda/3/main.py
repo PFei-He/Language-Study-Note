@@ -25,12 +25,12 @@ def main():
     say(reply)
 
 
-def reply(v):
-    print(v)
+def reply(content):
+    print(content)
 
 
-def say(f):
-    f("Hello World!")
+def say(func):
+    func("Hello World!")
 
 
 main()

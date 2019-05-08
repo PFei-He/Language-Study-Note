@@ -25,13 +25,13 @@ def main():
     say(reply)
 
 
-def reply(v):
-    print(v)
+def reply(content):
+    print(content)
     return "Hello Python!"
 
 
-def say(f):
-    print(f("Hello World!"))
+def say(func):
+    print(func("Hello World!"))
 
 
 main()

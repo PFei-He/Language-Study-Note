@@ -24,6 +24,6 @@
 
 @interface Block : NSObject
 
-- (void)say:(void (^)(void (^end)(NSString *)))reply;
+- (void)say:(void (^)(void (^bye)(NSString *)))reply;
 
 @end

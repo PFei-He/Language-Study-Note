@@ -21,13 +21,13 @@
  */
 
 fun main(args: Array<String>) {
-    say { end ->
+    say { bye ->
         println("Hello Kotlin!")
-        end("^_^")
+        bye("^_^")
     }
 }
 
-fun say(reply: ((end: String) -> Unit) -> Unit) {
+fun say(reply: ((content: String) -> Unit) -> Unit) {
     println("Hello World!")
     reply { content ->
         println(content)

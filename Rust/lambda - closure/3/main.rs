@@ -21,9 +21,9 @@
  */
 
 fn main() {
-    say(&|end| {
+    say(&|bye| {
         println!("Hello Rust!");
-        end("^_^".to_string());
+        bye("^_^".to_string());
     })
 }
 

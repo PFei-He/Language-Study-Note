@@ -24,18 +24,18 @@ function main()
     say(reply)
 end
 
-finish = function(content)
+bye = function(content)
     print(content)
 end
 
-reply = function(finish)
+reply = function(func)
     print("Hello Lua!")
-    finish("^_^")
+    func("^_^")
 end
 
 function say(reply)
     print("Hello World!")
-    reply(finish)
+    reply(bye)
 end
 
 main()

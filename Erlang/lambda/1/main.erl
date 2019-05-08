@@ -28,11 +28,11 @@
 -export([main/0]).
 
 main() -> {
-  say(fun(V) -> {
-    io:fwrite(V)
+  say(fun(Content) -> {
+    io:fwrite(Content)
   } end)
 }.
 
-say(F) -> {
-  F("Hello World!\n")
+say(Func) -> {
+  Func("Hello World!\n")
 }.

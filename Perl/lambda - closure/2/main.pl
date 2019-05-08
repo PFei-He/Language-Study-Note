@@ -21,15 +21,14 @@
 #
 
 #!/usr/bin/perl
-
 use strict;
 use warnings FATAL => 'all';
 
 sub main {
     say(sub {
         print "Hello Perl!\n";
-        my $end = shift;
-        $end->("^_^");
+        my $bye = shift;
+        $bye->("^_^");
     });
 }
 

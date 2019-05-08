@@ -22,9 +22,9 @@
 
 object main {
   def main(args: Array[String]): Unit = {
-    say(end => {
+    say(bye => {
       println("Hello Scala!")
-      end("^_^")
+      bye("^_^")
     })
   }
 

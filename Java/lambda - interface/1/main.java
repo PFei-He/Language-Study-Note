@@ -27,10 +27,10 @@ public class main {
     }
 
     void say(Reply reply) {
-        reply.f("Hello World!");
+        reply.func("Hello World!");
     }
 }
 
 interface Reply {
-    void f(String string);
+    void func(String content);
 }

@@ -19,18 +19,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-var Main = /** @class */ (function () {
-    function Main() {
-    }
-    Main.prototype.main = function () {
-        this.say(function (string) {
-            console.log(string);
+
+class Main {
+    constructor() {}
+
+    main() {
+        this.say((content) => {
+            console.log(content);
+            return "Hello TypeScript!";
         });
-    };
-    Main.prototype.say = function (reply) {
-        reply("Hello World!");
-    };
-    return Main;
-}());
+    }
+
+    say(reply) {
+        console.log(reply("Hello World!"));
+    }
+}
+
 var main = new Main();
 main.main();

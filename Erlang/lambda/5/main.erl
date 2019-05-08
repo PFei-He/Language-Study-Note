@@ -28,13 +28,11 @@
 -export([main/0]).
 
 main() ->
-  io:fwrite("~w~n", [recursive(0)]).
+  say(fun(Bye) ->
+    io:fwrite("Hello Erlang!\n"),
+    Bye("^_^\n") end).
 
-recursive(I) ->
-  if
-    (I >= 10) -> 0;
-    (I < 10) ->
-      io:fwrite("~w~n",[I]),
-      J = I + 1,
-      recursive(J)
-  end.
+say(Func) ->
+  io:fwrite("Hello World!\n"),
+  Func(fun(Content) ->
+    io:fwrite(Content) end).

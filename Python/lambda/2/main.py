@@ -25,18 +25,18 @@ def main():
     say(reply)
 
 
-def end(v):
-    print(v)
+def bye(content):
+    print(content)
 
 
-def reply(f):
+def reply(func):
     print("Hello Python!")
-    f("^_^")
+    func("^_^")
 
 
-def say(f):
+def say(func):
     print("Hello World!")
-    f(end)
+    func(bye)
 
 
 main()

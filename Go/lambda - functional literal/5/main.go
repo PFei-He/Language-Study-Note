@@ -20,12 +20,20 @@
  * THE SOFTWARE.
  */
 
-void main() {
-  say((string) => {
-    print(string)
-  });
+package main
+
+import "fmt"
+
+func main() {
+	say(func(bye func(string)) {
+		fmt.Println("Hello Go!")
+		bye("^_^")
+	})
 }
 
-void say(reply) {
-  reply("Hello World!");
+func say(reply func(func(string))) {
+	fmt.Println("Hello World!")
+	reply(func(content string) {
+		fmt.Println(content)
+	})
 }

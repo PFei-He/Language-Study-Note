@@ -21,9 +21,9 @@
 #
 
 def main()
-  say(lambda { |finish|
+  say(lambda { |bye|
     puts 'Hello Ruby!'
-    finish.call '^_^'
+    bye.call '^_^'
   })
 end
 

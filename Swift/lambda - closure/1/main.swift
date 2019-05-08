@@ -22,10 +22,10 @@
 
 import Foundation
 
-func say(_ closure: (_ string: String) -> Void) {
-    closure("Hello World!")
+func say(_ reply: (_ content: String) -> Void) {
+    reply("Hello World!")
 }
 
-say { (string) in
-    print(string)
+say { (content) in
+    print(content)
 }
