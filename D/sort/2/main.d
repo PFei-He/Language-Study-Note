@@ -25,7 +25,7 @@ module main;
 import std.stdio;
 import std.algorithm;
 
-void main(string[] args){
+void main(string[] args) {
     int[] array = [2, 1, 5, 3, 4];
     writeln(array);
     array.sort();

@@ -25,7 +25,7 @@ module main;
 import std.stdio;
 import std.string;
 
-void main(string[] args){
+void main(string[] args) {
     auto input = strip(stdin.readln());
     writeln(input);
 }

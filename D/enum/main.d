@@ -20,4 +20,20 @@
  * THE SOFTWARE.
  */
 
+module main;
 
+import std.stdio;
+
+enum Color {
+    RED,
+    ORANGE,
+    YELLOW,
+    GREEN,
+    CYAN,
+    BLUE,
+    PURPLE
+}
+
+void main(string[] args) {
+    writeln(Color.RED);
+}

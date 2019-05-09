@@ -24,7 +24,7 @@ module main;
 
 import std.stdio;
 
-void main(string[] args){
+void main(string[] args) {
     int[] array = [1, 2, 3, 4, 5];
     writeln(array);
 }

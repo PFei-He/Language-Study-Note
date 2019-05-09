@@ -24,7 +24,7 @@ module main;
 
 import std.stdio;
 
-void main(string[] args){
+void main(string[] args) {
     recursive(0);
 }
 
