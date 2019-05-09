@@ -20,14 +20,9 @@
  * THE SOFTWARE.
  */
 
-import java.util.Arrays;
-
-public class main {
-    public static void main(String args[]) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(array));
-
-        // int array[] = {1, 2, 3, 4, 5};
-        // System.out.println(Arrays.toString(array));
-    }
+void main() {
+  var array = ["B", "A", "E", "C", "D"];
+  print(array);
+  array.sort();
+  print(array);
 }

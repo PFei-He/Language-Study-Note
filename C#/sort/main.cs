@@ -20,14 +20,14 @@
  * THE SOFTWARE.
  */
 
-import java.util.Arrays;
+using System;
+using System.Collections;
 
-public class main {
-    public static void main(String args[]) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(array));
-
-        // int array[] = {1, 2, 3, 4, 5};
-        // System.out.println(Arrays.toString(array));
+public class M {
+    public static void Main() {
+        string[] array = {"B", "A", "E", "C", "D"};
+        Console.WriteLine("[{0}]", string.Join(", ", array));
+        Array.Sort(array);
+        Console.WriteLine("[{0}]", string.Join(", ", array));
     }
 }

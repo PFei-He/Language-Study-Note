@@ -20,14 +20,14 @@
  * THE SOFTWARE.
  */
 
-import java.util.Arrays;
+module main;
 
-public class main {
-    public static void main(String args[]) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(array));
+import std.stdio;
+import std.algorithm;
 
-        // int array[] = {1, 2, 3, 4, 5};
-        // System.out.println(Arrays.toString(array));
-    }
+void main(string[] args){
+    int[] array = [2, 1, 5, 3, 4];
+    writeln(array);
+    array.sort();
+    writeln(array);
 }

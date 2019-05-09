@@ -28,13 +28,5 @@
 -export([main/0]).
 
 main() ->
-  recursive(0).
-
-recursive(I) ->
-  if
-    (I >= 10) -> 0;
-    (I < 10) ->
-      io:fwrite("~w~n", [I]),
-      J = I + 1,
-      recursive(J)
-  end.
+  Array = [1, 2, 3, 4, 5],
+  io:fwrite("~p~n", [Array]).

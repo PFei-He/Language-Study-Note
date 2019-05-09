@@ -19,15 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
-import java.util.Arrays;
-
-public class main {
-    public static void main(String args[]) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(array));
-
-        // int array[] = {1, 2, 3, 4, 5};
-        // System.out.println(Arrays.toString(array));
-    }
-}
+var array = ["B", "A", "E", "C", "D"];
+console.log(array);
+array.sort();
+console.log(array);

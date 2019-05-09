@@ -20,14 +20,16 @@
  * THE SOFTWARE.
  */
 
-import java.util.Arrays;
+package main
 
-public class main {
-    public static void main(String args[]) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(array));
+import (
+	"sort"
+	"fmt"
+)
 
-        // int array[] = {1, 2, 3, 4, 5};
-        // System.out.println(Arrays.toString(array));
-    }
+func main() {
+	slice := sort.StringSlice{"B", "A", "E", "C", "D"}
+	fmt.Println(slice)
+	sort.Sort(slice)
+	fmt.Println(slice)
 }
