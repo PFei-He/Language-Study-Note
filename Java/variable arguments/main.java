@@ -22,12 +22,12 @@
 
 public class main {
     public static void main(String args[]) {
-        print("A", "B", "C");
+        run("A", "B", "C");
     }
 
-    static void print(String ... values) {
-        for (String v : values) {
-            System.out.println(v);
+    static void run(String ... values) {
+        for (String value : values) {
+            System.out.println(value);
         }
     }
 }

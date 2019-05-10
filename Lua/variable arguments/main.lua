@@ -21,8 +21,8 @@
 ]]
 
 function main(...)
-    for k,v in ipairs({...}) do
-        print(k,v)
+    for key,value in ipairs({...}) do
+        print(key,value)
     end
 end
 

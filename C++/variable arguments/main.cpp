@@ -28,11 +28,11 @@ using namespace std;
 void print(const char *values, ...);
 
 int main(int argc, const char * argv[]) {
-    print("A", "B", "C", NULL);
+    run("A", "B", "C", NULL);
     return 0;
 }
 
-void print(const char *values, ...) {
+void run(const char *values, ...) {
     cout << values << endl;
     va_list list;
     va_start(list, values);

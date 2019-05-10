@@ -21,5 +21,9 @@
  */
 
 void main() {
+  say();
+}
+
+void say() {
   print('Hello World!');
 }

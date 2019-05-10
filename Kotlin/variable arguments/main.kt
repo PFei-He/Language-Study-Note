@@ -21,11 +21,11 @@
  */
 
 fun main(args: Array<String>) {
-    print("A", "B", "C")
+    run("A", "B", "C")
 }
 
-fun print(vararg values: String) {
-    for (v in values) {
-        println(v)
+fun run(vararg values: String) {
+    for (value in values) {
+        println(value)
     }
 }

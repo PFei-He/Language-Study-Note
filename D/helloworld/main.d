@@ -25,5 +25,9 @@ module main;
 import std.stdio;
 
 void main(string[] args) {
+    say();
+}
+
+void say() {
     writeln("Hello World!");
 }

@@ -23,8 +23,8 @@
 import Foundation
 
 func main(with values: String ...) {
-    for string in values {
-        print(string)
+    for value in values {
+        print(value)
     }
 }
 

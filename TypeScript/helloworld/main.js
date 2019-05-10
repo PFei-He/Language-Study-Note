@@ -20,13 +20,12 @@
  * THE SOFTWARE.
  */
 var Main = /** @class */ (function () {
-    function Main(msg) {
-        this.msg = msg;
+    function Main() {
     }
     Main.prototype.say = function () {
-        return this.msg;
+        console.log("Hello World!");
     };
     return Main;
 }());
-var main = new Main("Hello World!");
-console.log(main.say());
+var main = new Main();
+main.say();

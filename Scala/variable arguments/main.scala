@@ -22,12 +22,12 @@
 
 object main {
   def main(args: Array[String]): Unit = {
-    print("A", "B", "C")
+    run("A", "B", "C")
   }
 
-  def print(values: String *): Unit = {
-    for (v <- values) {
-      println(v)
+  def run(values: String *): Unit = {
+    for (value <- values) {
+      println(value)
     }
   }
 }

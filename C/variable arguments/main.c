@@ -26,11 +26,11 @@
 void print(const char *value, ...);
 
 int main(int argc, const char * argv[]) {
-    print("A", "B", "C", NULL);
+    run("A", "B", "C", NULL);
     return 0;
 }
 
-void print(const char *values, ...) {
+void run(const char *values, ...) {
     printf("%s\n", values);
     va_list list;
     va_start(list, values);

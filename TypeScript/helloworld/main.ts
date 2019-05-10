@@ -21,12 +21,12 @@
  */
 
 class Main {
-    constructor(public msg : string) {}
+    constructor() {}
 
     say() {
-        return this.msg;
+        console.log("Hello World!");
     }
 }
 
-var main = new Main("Hello World!");
-console.log(main.say());
+let main = new Main();
+main.say();

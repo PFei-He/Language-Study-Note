@@ -21,10 +21,10 @@
  */
 
 fn main() {
-    print(&["A", "B", "C"]);
+    run(&["A", "B", "C"]);
 }
 
-fn print(values: &[&str]) {
+fn run(values: &[&str]) {
     for value in values {
         println!("{}", value);
     }

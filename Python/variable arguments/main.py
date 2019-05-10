@@ -22,8 +22,8 @@
 
 
 def main(*values):
-    for v in values:
-        print(v)
+    for value in values:
+        print(value)
 
 
 main('A', 'B', 'C')

@@ -25,11 +25,11 @@ package main
 import "fmt"
 
 func main() {
-	print("A", "B", "C")
+	run("A", "B", "C")
 }
 
-func print(values ... string) {
-	for v := range values {
-		fmt.Println(values[v])
+func run(values ... string) {
+	for value := range values {
+		fmt.Println(values[value])
 	}
 }

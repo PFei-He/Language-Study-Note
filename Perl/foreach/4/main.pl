@@ -24,20 +24,8 @@
 use strict;
 use warnings FATAL => 'all';
 
-#my @array = qw(1 2);
-my @array = ('1', '2');
+my @array = qw(1 2);
 print "@array\n";
-
-for (@array) {
-    print "$_\n";
-}
-
-print "$_\n" for @array;
-
-foreach (@array) {
-    print "$_\n";
-}
-
 foreach my $i (@array) {
     print "$i\n";
 }

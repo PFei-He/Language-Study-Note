@@ -24,10 +24,10 @@ using System;
 
 public class M {
 	public static void Main() {
-	    print("A", "B", "C");
+	    run("A", "B", "C");
 	}
 
-	static void print(params String[] values) {
+	static void run(params String[] values) {
 	    foreach (String value in values) {
 	        Console.WriteLine(value);
 	    }

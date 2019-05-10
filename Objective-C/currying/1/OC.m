@@ -24,13 +24,11 @@
 
 @implementation OC
 
-
 - (int (^)(int))add:(int)x
 {
     return ^(int y) {
         return x + y;
     };
 }
-
 
 @end

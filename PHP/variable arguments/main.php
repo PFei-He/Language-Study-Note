@@ -22,8 +22,8 @@
  */
 
 function main(...$values) {
-    foreach ($values as $v) {
-        print $v."\n";
+    foreach ($values as $value) {
+        print $value."\n";
     }
 }
 

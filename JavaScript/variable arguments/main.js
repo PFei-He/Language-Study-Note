@@ -21,15 +21,11 @@
  */
 
 function main() {
-    print("A", "B", "C");
-}
-
-function print() {
-    for (var v in arguments) {
-        if (arguments.hasOwnProperty(v)) {
-            console.log(arguments[v]);
+    for (var value in arguments) {
+        if (arguments.hasOwnProperty(value)) {
+            console.log(arguments[value]);
         }
     }
 }
 
-main();
+main("A", "B", "C");

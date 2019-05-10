@@ -21,8 +21,8 @@
 #
 
 def main(*values)
-  values.each do |v|
-    puts v
+  values.each do |value|
+    puts value
   end
 end
 

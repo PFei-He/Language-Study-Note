@@ -22,8 +22,6 @@
 
 import Foundation
 
-import Foundation
-
 func main() {
     say()
 }
