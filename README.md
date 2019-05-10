@@ -158,13 +158,11 @@ void main() {
 %% API
 -export([main/0]).
 
-main() -> {
-  say()
-}.
+main() ->
+  say().
 
-say() -> {
-  io:fwrite("Hello World!\n")
-}.
+say() ->
+  io:fwrite("Hello World!\n").
 ```
 
 ### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
