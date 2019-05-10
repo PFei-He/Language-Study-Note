@@ -20,10 +20,5 @@
 # THE SOFTWARE.
 #
 
-say <- function()
-    print("Hello World!")
-
-main <- function()
-    say()
-
-main()
+array <- c(1, 2, 3, 4, 5)
+print(array)

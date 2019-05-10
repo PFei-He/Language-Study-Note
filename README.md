@@ -483,6 +483,29 @@ for i in array:
     print(i)
 ```
 
+### [R](https://github.com/PFei-He/Language-Study-Note/tree/master/R) <br>
+---
+* [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/R/helloworld)
+```r
+say <- function()
+    print("Hello World!")
+
+main <- function()
+    say()
+
+main()
+```
+
+* [foreach](https://github.com/PFei-He/Language-Study-Note/tree/master/R/foreach)
+```r
+array <- c(1, 2)
+main <- function()
+    for (i in array)
+        print(i)
+
+main()
+```
+
 ### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/helloworld)
