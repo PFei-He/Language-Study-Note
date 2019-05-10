@@ -5,14 +5,14 @@
 说明
 ---
 
-### 关于
+## 关于
 此笔记只是本人学习过程中的一点知识归集，并不一定会列出所有语言的所有知识点，也不会对语言进行任何介绍，目前是学懂一点，记录一点，欢迎各位童鞋一起来记录，也欢迎转给更多的人学习。<br><br>
 由于学习语言不可避免的要在真正工程中使用，为学习时能更真切的学到语言在实际项目中的应用，此笔记会上传一些实际工程项目中不涉及版权问题及企业机密的代码片段或文件以便学习。
 
-### 目录
+## 目录
 以下列出部分例子，全部内容请点进语言下查看。
 
-##### [C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
+### [C](https://github.com/PFei-He/Language-Study-Note/tree/master/C) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C/helloworld)
 ```c
@@ -30,7 +30,7 @@ void say() {
 }
 ```
 
-##### [C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
+### [C#](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%23/helloworld)
 ```cs
@@ -63,7 +63,7 @@ public class M {
 }
 ```
 
-##### [C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
+### [C++](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/C%2B%2B/helloworld)
 ```c++
@@ -94,7 +94,7 @@ int main(int argc, const char * argv[]) {
 }
 ```
 
-##### [D](https://github.com/PFei-He/Language-Study-Note/tree/master/D) <br>
+### [D](https://github.com/PFei-He/Language-Study-Note/tree/master/D) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/D/helloworld)
 ```d
@@ -125,7 +125,7 @@ void main(string[] args) {
 }
 ```
 
-##### [Dart](https://github.com/PFei-He/Language-Study-Note/tree/master/Dart) <br>
+### [Dart](https://github.com/PFei-He/Language-Study-Note/tree/master/Dart) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Dart/helloworld)
 ```dart
@@ -149,7 +149,7 @@ void main() {
 }
 ```
 
-##### [Erlang](https://github.com/PFei-He/Language-Study-Note/tree/master/Erlang) <br>
+### [Erlang](https://github.com/PFei-He/Language-Study-Note/tree/master/Erlang) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Erlang/helloworld)
 ```erlang
@@ -167,7 +167,7 @@ say() -> {
 }.
 ```
 
-##### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
+### [Go](https://github.com/PFei-He/Language-Study-Note/tree/master/Go) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Go/helloworld)
 ```go
@@ -180,7 +180,7 @@ func main() {
 }
 
 func say() {
-	fmt.Println("Hello World!")
+    fmt.Println("Hello World!")
 }
 ```
 
@@ -199,7 +199,7 @@ func main() {
 }
 ```
 
-##### [Groovy](https://github.com/PFei-He/Language-Study-Note/tree/master/Groovy) <br>
+### [Groovy](https://github.com/PFei-He/Language-Study-Note/tree/master/Groovy) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Groovy/helloworld)
 ```groovy
@@ -227,7 +227,7 @@ def main() {
 main()
 ```
 
-##### [HTML](https://github.com/PFei-He/Language-Study-Note/tree/master/HTML) <br>
+### [HTML](https://github.com/PFei-He/Language-Study-Note/tree/master/HTML) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/HTML/helloworld)
 ```html
@@ -243,7 +243,7 @@ main()
 </html>
 ```
 
-##### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
+### [Java](https://github.com/PFei-He/Language-Study-Note/tree/master/Java) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Java/helloworld)
 ```java
@@ -272,7 +272,7 @@ public class main {
 }
 ```
 
-##### [JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
+### [JavaScript](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/JavaScript/helloworld)
 ```javascript
@@ -296,7 +296,7 @@ for (var i in array) {
 }
 ```
 
-##### [Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
+### [Kotlin](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Kotlin/helloworld)
 ```kotlin
@@ -319,7 +319,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-##### [Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
+### [Lua](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Lua/helloworld)
 ```lua
@@ -344,7 +344,7 @@ for i,j in pairs(array) do
 end
 ```
 
-##### [Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
+### [Objective-C](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Objective-C/helloworld)
 ```objective-c
@@ -406,7 +406,7 @@ int main(int argc, const char * argv[]) {
 }
 ```
 
-##### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
+### [Perl](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Perl/helloworld)
 ```perl
@@ -436,7 +436,7 @@ foreach my $i (@array) {
 }
 ```
 
-##### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
+### [PHP](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/PHP/helloworld)
 ```php
@@ -462,7 +462,7 @@ foreach ($array as $i) {
 }
 ```
 
-##### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
+### [Python](https://github.com/PFei-He/Language-Study-Note/tree/master/Python) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Python/helloworld)
 ```python
@@ -485,7 +485,7 @@ for i in array:
     print(i)
 ```
 
-##### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
+### [Ruby](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Ruby/helloworld)
 ```ruby
@@ -509,7 +509,7 @@ array.each do |i|
 end
 ```
 
-##### [Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
+### [Rust](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Rust/helloworld)
 ```rust
@@ -532,7 +532,7 @@ fn main() {
 }
 ```
 
-##### [Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
+### [Scala](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Scala/helloworld)
 ```scala
@@ -559,7 +559,7 @@ object main {
 }
 ```
 
-##### [Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
+### [Swift](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/Swift/helloworld)
 ```swift
@@ -587,7 +587,7 @@ for i in array {
 }
 ```
 
-##### [TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>
+### [TypeScript](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript) <br>
 ---
 * [Hello World](https://github.com/PFei-He/Language-Study-Note/tree/master/TypeScript/helloworld)
 ```typescript
