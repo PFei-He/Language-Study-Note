@@ -20,7 +20,7 @@
   THE SOFTWARE.
 ]]
 
-local hash = {a = 100, 10, 20, [5] = 30 }
+local hash = {a = 100, 10, 20, [5] = 30}
 
 for k,v in ipairs(hash) do
     print("ipairs", k, v)

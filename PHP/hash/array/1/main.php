@@ -1,3 +1,4 @@
+<?php
 /**
  * Copyright (c) 2019 faylib.top
  *
@@ -20,17 +21,19 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
+$hash = array(
+    'a' => '1',
+    "b" => "2",
+    c => "3",
+);
 
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
-}
+// 自 PHP 5.4 起
+//    $hash = [
+//        'a' => '1',
+//        "b" => "2",
+//        c => "3",
+//    ];
+
+echo $hash['a']."\n";
+echo $hash["b"]."\n";
+echo $hash[c]."\n";

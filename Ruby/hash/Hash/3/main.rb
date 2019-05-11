@@ -20,11 +20,7 @@
 # THE SOFTWARE.
 #
 
-say <- function()
-    # cat("hello world\n")
-    print("Hello World!")
-
-main <- function()
-    say()
-
-main()
+hash = Hash["a" => 1, "b" => 2, "c" => 3]
+puts "#{hash}"
+hash.delete("a")
+puts "#{hash}"

@@ -20,17 +20,10 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
-
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
-}
+var map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+console.log(map);
+map.delete('a');
+console.log(map);

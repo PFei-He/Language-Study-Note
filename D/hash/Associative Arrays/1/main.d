@@ -20,17 +20,17 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
+module main;
 
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
+import std.stdio;
+
+void main(string[] args) {
+    int[string] aa;
+    aa["a"] = 1;
+    aa["b"] = 2;
+    aa["c"] = 3;
+    writeln(aa);
+    writeln(aa["a"]);
+    writeln(aa["b"]);
+    writeln(aa["c"]);
 }

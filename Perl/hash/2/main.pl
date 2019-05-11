@@ -20,11 +20,15 @@
 # THE SOFTWARE.
 #
 
-say <- function()
-    # cat("hello world\n")
-    print("Hello World!")
+#!/usr/bin/perl
+use strict;
+use warnings FATAL => 'all';
 
-main <- function()
-    say()
-
-main()
+my %hash;
+$hash{"a"} = 1;
+$hash{"b"} = 2;
+$hash{"c"} = 3;
+print "@{[%hash]}\n";
+print $hash{"a"}."\n";
+print $hash{"b"}."\n";
+print $hash{"c"}."\n";

@@ -20,11 +20,15 @@
 # THE SOFTWARE.
 #
 
-say <- function()
-    # cat("hello world\n")
-    print("Hello World!")
+#!/usr/bin/perl
+use strict;
+use warnings FATAL => 'all';
+# use Data::Dumper;
 
-main <- function()
-    say()
-
-main()
+# my %hash = ('a' => '1', "b" => "2", c => "3");
+my %hash = ("a" => 1, "b" => 2, "c" => 3);
+# print Dumper(\%hash);
+print "@{[%hash]}\n";
+print $hash{"a"}."\n";
+print $hash{"b"}."\n";
+print $hash{"c"}."\n";

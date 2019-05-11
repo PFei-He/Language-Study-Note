@@ -20,11 +20,11 @@
 # THE SOFTWARE.
 #
 
-say <- function()
-    # cat("hello world\n")
-    print("Hello World!")
-
-main <- function()
-    say()
-
-main()
+hash = Hash.new
+hash["a"] = 1
+hash["b"] = 2
+hash["c"] = 3
+puts "#{hash}"
+puts "#{hash["a"]}"
+puts "#{hash["b"]}"
+puts "#{hash["c"]}"

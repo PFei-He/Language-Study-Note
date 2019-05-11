@@ -20,17 +20,18 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
+package main
 
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
+import "fmt"
+
+func main() {
+	m := map[string]int {
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+	fmt.Println(m)
+	fmt.Println(m["a"])
+	fmt.Println(m["b"])
+	fmt.Println(m["c"])
 }

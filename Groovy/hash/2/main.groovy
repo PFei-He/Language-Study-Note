@@ -20,17 +20,11 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
-
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
-}
+def hash = [:]
+hash['a'] = 1
+hash['b'] = 2
+hash['c'] = 3
+println hash
+println hash['a']
+println hash['b']
+println hash['c']

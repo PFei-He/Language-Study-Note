@@ -20,17 +20,14 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
-
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
+export interface HashMap {
+    [details: string] : number;
 }
+
+let hashMap: HashMap = {};
+hashMap["a"] = 1;
+hashMap["b"] = 2;
+hashMap["c"] = 3;
+console.log(JSON.stringify(hashMap));
+delete hashMap["a"];
+console.log(JSON.stringify(hashMap));

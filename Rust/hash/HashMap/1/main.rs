@@ -20,17 +20,15 @@
  * THE SOFTWARE.
  */
 
-import java.util.HashMap;
+use std::collections::HashMap;
 
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
+fn main() {
+    let mut hash_map = HashMap::new();
+    hash_map.insert(String::from("a"), 1);
+    hash_map.insert(String::from("b"), 2);
+    hash_map.insert(String::from("c"), 3);
+    println!("{:?}", hash_map);
+    println!("{:?}", hash_map.get(&String::from("a")));
+    println!("{:?}", hash_map.get(&String::from("b")));
+    println!("{:?}", hash_map.get(&String::from("c")));
 }

@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Copyright (c) 2019 faylib.top
  *
@@ -19,18 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
-import java.util.HashMap;
-
-public class main {
-    public static void main(String args[]) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("a", 1);
-        hashMap.put("b", 2);
-        hashMap.put("c", 3);
-        System.out.println(hashMap);
-        System.out.println(hashMap.get("a"));
-        System.out.println(hashMap.get("b"));
-        System.out.println(hashMap.get("c"));
-    }
-}
+Object.defineProperty(exports, "__esModule", { value: true });
+var hashMap = {};
+hashMap["a"] = 1;
+hashMap["b"] = 2;
+hashMap["c"] = 3;
+console.log(hashMap);
+console.log(hashMap["a"]);
+console.log(hashMap["b"]);
+console.log(hashMap["c"]);
