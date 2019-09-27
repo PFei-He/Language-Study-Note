@@ -142,7 +142,7 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @discussion 发送到服务器的请求的头部参数，用于定义一些网络验证的参数
  */
-@property (nonatomic, copy) NSDictionary *requestHeader;
+@property (nonatomic, copy) NSDictionary *requestHeaders;
 
 /*!
  请求参数
