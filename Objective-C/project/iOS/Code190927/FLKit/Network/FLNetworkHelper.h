@@ -26,37 +26,37 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
- 接收请求成功的通知
+ 处理请求成功的通知
  
- @discussion 该方法用于接收请求成功的通知对象
+ @discussion 该方法用于接收请求成功的响应对象
  
-            传入的对象用于接收通知的回调
+            传入的对象用于接收通知
  
  @warning 使用通知操作网络请求时实现
 
         网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
-#define FLHandleResponseSuccessNotification(notification) \
-- (void)handleResponseSuccessNotification:(NSNotification *)notification
+#define FLHandleRequestSuccessNotification(notification) \
+- (void)handleRequestSuccessNotification:(NSNotification *)notification
 
 /*!
- 接收请求失败的通知
+ 处理请求失败的通知
  
- @discussion 该方法用于接收请求失败的通知对象
+ @discussion 该方法用于接收请求失败的响应对象
  
-            传入的对象用于接收通知的回调
+            传入的对象用于接收通知
  
  @warning 使用通知操作网络请求时实现
 
         网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
-#define FLHandleResponseFailureNotification(notification) \
-- (void)handleResponseFailureNotification:(NSNotification *)notification
+#define FLHandleRequestFailureNotification(notification) \
+- (void)handleRequestFailureNotification:(NSNotification *)notification
 
 /*!
  网络请求响应
  
- @discussion 该方法用于接收请求完成的结果对象，该对象包含有当前的请求任务，请求成功/失败的结果
+ @discussion 该方法用于转化请求结束的响应对象，该对象包含有当前的请求任务，请求成功/失败的结果
  
  @return FLResponse 实例
  
@@ -74,9 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /*!
- 请求发送成功的代理方法
+ 请求成功的代理方法
  
- @discussion 该方法用于接收请求成功的结果对象，该对象包含有当前的请求任务，请求成功的结果
+ @discussion 该方法用于接收请求成功的响应对象，该对象包含有当前的请求任务，请求成功的结果
  
  @param networkHelper 网络请求助手
  
@@ -91,9 +91,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)networkHelper:(FLNetworkHelper *)networkHelper dataTask:(NSURLSessionDataTask *)dataTask resultData:(id)resultData;
 
 /*!
- 请求发送失败的代理方法
+ 请求失败的代理方法
  
- @discussion 该方法用于接收请求成功的结果对象，该对象包含有当前的请求任务，请求失败的结果
+ @discussion 该方法用于接收请求失败的响应对象，该对象包含有当前的请求任务，请求失败的结果
  
  @param networkHelper 网络请求助手
  
@@ -207,9 +207,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @discussion 发送请求，并将请求结果返回到代理方法
  
-            请求成功使用 `-networkHelper:dataTask:resultData:` 代理方法
+            请求成功实现 `-networkHelper:dataTask:resultData:` 代理方法
  
-            请求失败使用 `-networkHelper:dataTask:error:` 代理方法
+            请求失败实现 `-networkHelper:dataTask:error:` 代理方法
  
  @return 发起的请求任务
  
@@ -222,11 +222,11 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
 /*!
  发送请求
  
- @discussion 发送请求，并将请求结果使用通知发送
+ @discussion 发送请求，并使用通知发送请求结果
  
-            请求成功使用 `FLHandleResponseSuccessNotification` 宏接收通知
+            请求成功使用 `FLHandleRequestSuccessNotification(notification)` 宏接收通知
  
-            请求失败使用 `FLHandleResponseFailureNotification` 宏接收通知
+            请求失败使用 `FLHandleRequestFailureNotification(notification)` 宏接收通知
  
  @param receiver 请求结果接收者
  
