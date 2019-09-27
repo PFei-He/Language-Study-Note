@@ -92,7 +92,7 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
           [NSString stringWithFormat:@"[ URL ] %@", URLString],
           [NSString stringWithFormat:@"[ METHOD ] %@", method],
           [NSString stringWithFormat:@"[ TIMEOUT ] %@", @(self.timeoutInterval)],
-          [NSString stringWithFormat:@"[ HEADERS ] %@", self.requestHeader],
+          [NSString stringWithFormat:@"[ HEADERS ] %@", self.requestHeaders],
           [NSString stringWithFormat:@"[ PARAMS ] %@", body]);
     
     // 创建请求
@@ -107,7 +107,7 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
     request.timeoutInterval = self.timeoutInterval;
     
     // 设置请求头
-    [self.requestHeader enumerateKeysAndObjectsUsingBlock:^(id _Nonnull field, id _Nonnull value, BOOL * _Nonnull stop) {
+    [self.requestHeaders enumerateKeysAndObjectsUsingBlock:^(id _Nonnull field, id _Nonnull value, BOOL * _Nonnull stop) {
         [request setValue:value forHTTPHeaderField:field];
     }];
     
@@ -199,6 +199,7 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
 // 发送请求(代码块)
 - (NSURLSessionDataTask *)sendRequestSuccess:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nonnull))success failure:(void (^)(NSURLSessionDataTask * _Nonnull, NSError * _Nonnull))failure
 {
+    // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
         // 设置重试计数
@@ -208,12 +209,14 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
         dataTask = [self requestWithMethod:FLNetworkRequestMethodConvert[self.requestMethod] URLString:self.requestURL body:self.requestParams success:success failure:failure];
     });
     
+    // 返回数据请求
     return dataTask;
 }
 
 // 发送请求(代理)
 - (NSURLSessionDataTask *)sendRequest
 {
+    // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
         // 设置重试计数
@@ -223,12 +226,14 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
         dataTask = [self requestWithMethod:FLNetworkRequestMethodConvert[self.requestMethod] URLString:self.requestURL body:self.requestParams success:nil failure:nil];
     });
     
+    // 返回数据请求
     return dataTask;
 }
 
 // 发送请求(通知)
 - (NSURLSessionDataTask *)sendRequestForReceiver:(id)receiver
 {
+    // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
         // 设置请求接收者
@@ -254,6 +259,7 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
         dataTask = [self requestWithMethod:FLNetworkRequestMethodConvert[self.requestMethod] URLString:self.requestURL body:self.requestParams success:nil failure:nil];
     });
     
+    // 返回数据请求
     return dataTask;
 }
 
