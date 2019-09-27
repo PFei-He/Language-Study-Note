@@ -234,21 +234,21 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
         // 设置请求接收者
         self.receiver = receiver;
         
-        // 设置重试计数
-        self.retryTimesCount = self.retryTimes = self.retryTimes < 1 ? 1 : self.retryTimes;
-        
         // 生成8位随机字符串
         char data[8];
         for (int x = 0; x < 8; data[x++] = (char)('a' + (arc4random_uniform(26))));
         NSString *random = [[NSString alloc] initWithBytes:data length:8 encoding:NSUTF8StringEncoding];
         
         // 设置请求成功通知名并添加监听
-        self.successNotificationName = [NSString stringWithFormat:@"%@%@ResponseSuccessNotification", random, [receiver classForCoder]];
-        [[NSNotificationCenter defaultCenter] addObserver:receiver selector:NSSelectorFromString(@"handleResponseSuccessNotification:") name:self.successNotificationName object:nil];
+        self.successNotificationName = [NSString stringWithFormat:@"%@%@RequestSuccessNotification", random, [receiver class]];
+        [[NSNotificationCenter defaultCenter] addObserver:receiver selector:NSSelectorFromString(@"handleRequestSuccessNotification:") name:self.successNotificationName object:nil];
         
         // 设置请求失败通知名并添加监听
-        self.failureNotificationName = [NSString stringWithFormat:@"%@%@ResponseFailureNotification", random, [receiver classForCoder]];
-        [[NSNotificationCenter defaultCenter] addObserver:receiver selector:NSSelectorFromString(@"handleResponseFailureNotification:") name:self.failureNotificationName object:nil];
+        self.failureNotificationName = [NSString stringWithFormat:@"%@%@RequestFailureNotification", random, [receiver class]];
+        [[NSNotificationCenter defaultCenter] addObserver:receiver selector:NSSelectorFromString(@"handleRequestFailureNotification:") name:self.failureNotificationName object:nil];
+        
+        // 设置重试计数
+        self.retryTimesCount = self.retryTimes = self.retryTimes < 1 ? 1 : self.retryTimes;
         
         // 发送
         dataTask = [self requestWithMethod:FLNetworkRequestMethodConvert[self.requestMethod] URLString:self.requestURL body:self.requestParams success:nil failure:nil];
