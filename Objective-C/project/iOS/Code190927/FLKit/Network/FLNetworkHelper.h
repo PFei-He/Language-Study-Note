@@ -32,9 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
  
             传入的对象用于接收通知的回调
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 #define FLHandleResponseSuccessNotification(notification) \
 - (void)handleResponseSuccessNotification:(NSNotification *)notification
@@ -46,23 +46,23 @@ NS_ASSUME_NONNULL_BEGIN
  
             传入的对象用于接收通知的回调
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 #define FLHandleResponseFailureNotification(notification) \
 - (void)handleResponseFailureNotification:(NSNotification *)notification
 
 /*!
- 请求结果
+ 网络请求响应
  
- @discussion 该方法用于接收请求的结果对象，该对象包含有当前的请求任务，请求成功/失败的结果
+ @discussion 该方法用于接收请求完成的结果对象，该对象包含有当前的请求任务，请求成功/失败的结果
  
  @return FLResponse 实例
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 #define kFLResponse \
 [FLResponse modelWithJSON:notification.userInfo]
@@ -84,9 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param resultData 请求成功的结果
  
- @warning 使用代理接收请求结果时使用
+ @warning 使用代理操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 - (void)networkHelper:(FLNetworkHelper *)networkHelper dataTask:(NSURLSessionDataTask *)dataTask resultData:(id)resultData;
 
@@ -101,9 +101,9 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param error 请求失败的结果
  
- @warning 使用代理接收请求结果时使用
+ @warning 使用代理操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 - (void)networkHelper:(FLNetworkHelper *)networkHelper dataTask:(NSURLSessionDataTask *)dataTask error:(NSError *)error;
 
@@ -173,9 +173,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
 /*!
  网络请求助手代理
  
- @warning 使用代理接收请求结果时使用
+ @warning 使用代理操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 @property (nonatomic, weak) id<FLNetworkHelperDelegate> delegate;
 
@@ -196,9 +196,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @return 发起的请求任务
  
- @warning 使用代码块接收请求结果时使用
+ @warning 使用代码块操作网络请求时实现
  
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 - (NSURLSessionDataTask *)sendRequestSuccess:(nullable void (^)(NSURLSessionDataTask *dataTask, id resultData))success failure:(nullable void (^)(NSURLSessionDataTask *dataTask, NSError *error))failure;
 
@@ -213,9 +213,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @return 发起的请求任务
  
- @warning 使用代理接收请求结果时使用
+ @warning 使用代理操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 - (NSURLSessionDataTask *)sendRequest;
 
@@ -232,9 +232,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @return 发起的请求任务
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
  
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 - (NSURLSessionDataTask *)sendRequestForReceiver:(id)receiver;
 
@@ -247,9 +247,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @discussion 使用 kFLResponse 宏接收数据
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
 
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 @property (nonatomic, strong) NSURLSessionDataTask *dataTask;
 
@@ -258,9 +258,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @discussion 使用 kFLResponse 宏接收数据
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
  
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 @property (nonatomic, strong) id resultData;
 
@@ -269,9 +269,9 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
  
  @discussion 使用 kFLResponse 宏来接收数据
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知操作网络请求时实现
  
-        网络请求助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络请求助手集成了代码块，代理，通知三种方式进行网络请求操作，使用时只需实现其中一种方式即可
  */
 @property (nonatomic, strong) NSError *error;
 
