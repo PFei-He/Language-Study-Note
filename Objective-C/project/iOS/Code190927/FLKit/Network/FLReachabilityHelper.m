@@ -190,6 +190,9 @@ FL_CLASS_NAME(@"REACHABILITY")
 {
     if ([delegate respondsToSelector:@selector(reachabilityHelper:reachabilityStatusChanged:)]) {
         [self.delegates addPointer:(__bridge void*)delegate];
+	FLLog(@"[ MONITOR ] Added");
+        FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [delegate class]]);
+        FLLog(@"[ USING ] Delegate");
     }
 }
 
@@ -366,18 +369,30 @@ FL_CLASS_NAME(@"REACHABILITY")
 
 #pragma mark -
 
-// 当前网络可达性状态
-- (FLReachabilityStatus)currentReachabilityStatus
-{
-    return self.previousStatus;
-}
-
 // 监听网络可达性状态发生改变
 - (void)addMonitor:(id)monitor reachabilityStatusChangedBlock:(void (^)(FLReachabilityStatus))block
 {
     [self.monitors setObject:monitor forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
     [self.blocks setObject:block forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
     self.blocksCount++;
+	
+    FLLog(@"[ MONITOR ] Added");
+    FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]]);
+    FLLog(@"[ USING ] Block");
+}
+
+//
+- (void)addMonitor：(id)monitor
+{
+    FLLog(@"[ MONITOR ] Added");
+    FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]]);
+    FLLog(@"[ USING ] Notification");
+}
+
+// 当前网络可达性状态
+- (FLReachabilityStatus)currentReachabilityStatus
+{
+    return self.previousStatus;
 }
 
 @end
