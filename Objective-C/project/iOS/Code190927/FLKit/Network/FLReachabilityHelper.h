@@ -27,11 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  添加网络可达性状态改变的监听者
  
- @discussion 传入的对象用于添加到网络可达性状态改变的监听者队列
+ @discussion 传入的对象将被添加到网络可达性状态改变的监听者队列
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define kFLAddReachabilityStatusChangedObserver(observer) \
 [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(handleReachabilityStatusChangedNotification:) name:kFLReachabilityStatusChangedNotification object:nil]
@@ -39,23 +39,25 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  移除网络可达性状态改变的监听者
  
- @discussion 传入的对象用于移除到网络可达性状态改变的监听者队列
+ @discussion 传入的对象将被从网络可达性状态改变的监听者队列中移除
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define kFLRemoveReachabilityStatusChangedObserver(observer) \
 [[NSNotificationCenter defaultCenter] removeObserver:observer name:kFLReachabilityStatusChangedNotification object:nil]
 
 /*!
- 处理网络可达性状态改变时的通知
+ 处理网络可达性状态改变的通知
  
- @discussion 传入的对象用于接收通知的回调
+ @discussion 该方法用于接收网络可达性状态发生改变的消息
  
- @warning 使用通知接收请求结果时使用
+            传入的对象用于接收通知
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+ @warning 使用通知监听网络可达性状态时实现
+ 
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define FLHandleReachabilityStatusChangedNotification(notification) \
 - (void)handleReachabilityStatusChangedNotification:(NSNotification *)notification
@@ -63,11 +65,13 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  获取当前网络可达性状态
  
- @discussion 传入的对象用于接收当前网络可达性状态
+ @discussion 该方法用于接收当前已发生了改变的网络可达性状态
  
- @warning 使用通知接收请求结果时使用
+            传入的对象用于接收网络可达性状态
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+ @warning 使用通知监听网络可达性状态时实现
+ 
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define kFLGetCurrentReachabilityStatus(status) \
 FLReachabilityHelper *reachabilityHelper = notification.object; \
@@ -86,13 +90,13 @@ typedef NS_ENUM(NSUInteger, FLReachabilityStatus) {
 };
 
 /*!
- 网络可达性状态改变的通知
+ 网络可达性状态改变的通知名
  
- @discussion 使用通知接收状态改变时监听此通知名，此通知名由一个通知的队列管理，所有监听此通知名的类都会接收到通知
+ @discussion 使用通知监听网络可达性状态时监听此通知名，所有监听此通知名的类都会接收到网络可达性状态改变的消息
  
- @warning 使用通知接收请求结果时使用
+ @warning 使用通知监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 extern NSString * const kFLReachabilityStatusChangedNotification;
 
@@ -103,15 +107,15 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
 /*!
  网络可达性状态发生改变的代理方法
  
- @discussion 此方法用于接收网络可达性状态改变的消息，由一个代理的队列管理，所有实现此代理方法的类都会接收到消息
+ @discussion 此方法用于接收网络可达性状态改变的消息，由一个代理的队列管理，所有实现此代理方法的类都会接收到网络可达性状态改变的消息
  
- @param reachabilityHelper 网络可达性助手实例
+ @param reachabilityHelper 网络可达性助手
  
  @param status 网络可达性状态
  
- @warning 使用代理接收网络状态时调用
+ @warning 使用代理监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 - (void)reachabilityHelper:(FLReachabilityHelper *)reachabilityHelper reachabilityStatusChanged:(FLReachabilityStatus)status;
 
@@ -122,9 +126,9 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
 /*!
  网络可达性助手代理
  
- @warning 使用代理接收请求结果时使用
+ @warning 使用代理监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 @property (nonatomic, weak) id<FLReachabilityHelperDelegate> delegate;
 
@@ -135,23 +139,23 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
  
  @param hostName 指定主机域名
  
- @return FLReachabilityHelper 网络可达性助手实例
+ @return FLReachabilityHelper 实例
  */
 + (instancetype)helperWithHostName:(NSString *)hostName;
 
 /*!
- 检查是否可以连接到指定主机 IP 地址
+ 检查是否可以连接到指定 IP 地址
  
- @param hostAddress 指定 IP 地址
+ @param address 指定 IP 地址
  
- @return FLReachabilityHelper 网络可达性助手实例
+ @return FLReachabilityHelper 实例
  */
-+ (instancetype)helperWithAddress:(const struct sockaddr *)hostAddress;
++ (instancetype)helperWithAddress:(const struct sockaddr *)address;
 
 /*!
  检查是否可以连接到默认路由
  
- @return FLReachabilityHelper 网络可达性助手实例
+ @return FLReachabilityHelper 实例
  */
 + (instancetype)helper;
 
@@ -183,9 +187,9 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
 #pragma mark -
 
 /*!
- 监听网络状态发生改变
+ 监听网络可达性状态
  
- @discussion 此方法用于添加监听者到网络可达性状态监听队列，网络可达性状态改变时，所有实现此方法的类都会接收到消息
+ @discussion 此方法用于将监听者添加到网络可达性状态监听队列，所有实现此方法的类都会接收到网络可达性状态改变的消息
  
  @param monitor 网络可达性监听者
  
@@ -193,20 +197,20 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
  
  @field status 网络可达性状态
  
- @warning 使用代码块接收网络状态时调用
+ @warning 使用代码块监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 - (void)addMonitor:(id)monitor reachabilityStatusChangedBlock:(nonnull void (^)(FLReachabilityStatus status))block;
 
 /*!
- 当前网络状态
+ 当前网络可达性状态
  
- @return 网络状态
+ @return 网络可达性状态
  
- @warning 使用通知接收网络状态时调用
+ @warning 使用通知监听网络可达性状态时实现
  
-        网络可达性助手使用了代码块，代理，通知三种方式进行请求回调，只需要使用其中一种方式即可
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 - (FLReachabilityStatus)currentReachabilityStatus;
 
