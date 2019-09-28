@@ -39,7 +39,7 @@ typedef void(^FLReachabilityStatusChangedBlock)(FLReachabilityStatus);
 /*! 网络可达性状态改变的通知 */
 NSString * const kFLReachabilityStatusChangedNotification = @"kFLReachabilityStatusChangedNotification";
 /*! 代码块计数名 */
-NSString *kFLReachabilityStatusChangedBlock = @"kFLReachabilityStatusChangedBlock";
+NSString * const kFLReachabilityStatusChangedBlock = @"kFLReachabilityStatusChangedBlock";
 
 /*! 声明网络可达性状态发生变化回调的方法 */
 static void FLReachabilityCallback(SCNetworkReachabilityRef ref, SCNetworkReachabilityFlags flags, void* info);
@@ -212,24 +212,24 @@ FL_CLASS_NAME(@"REACHABILITY")
 // 根据标记获取网络状态
 - (FLReachabilityStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags
 {
-	if ((flags & kSCNetworkReachabilityFlagsReachable) == 0) { // 网络不通
-		return FLReachabilityStatusNone;
-	}
+    if ((flags & kSCNetworkReachabilityFlagsReachable) == 0) { // 网络不通
+	return FLReachabilityStatusNone;
+    }
 
-    // 定义网络状态
-    FLReachabilityStatus status = FLReachabilityStatusNone;
+    // 网络可达性状态
+    FLReachabilityStatus status = FLReachabilityStatusUnknown;
 
-	if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0) { // 可连上目标主机
-		status = FLReachabilityStatusWiFi;
-	}
+    if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0) { // 可连上目标主机
+	status = FLReachabilityStatusWiFi;
+    }
 
-	if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand) != 0) || (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0)) { // 按需连接状态（CFSocketStream）
+    if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand) != 0) || (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0)) { // 按需连接状态（CFSocketStream）
         if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0) { // 不需用户干预
             status = FLReachabilityStatusWiFi;
         }
     }
 
-	if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN) { // 使用的是 WWAN 网络接口（CFNetwork）
+    if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN) { // 使用的是 WWAN 网络接口（CFNetwork）
         
         // 获取当前数据网络的类型
         CTTelephonyNetworkInfo *info = [CTTelephonyNetworkInfo new];
@@ -251,9 +251,9 @@ FL_CLASS_NAME(@"REACHABILITY")
                 status = FLReachabilityStatus4G;
             }
         }
-	}
+    }
     
-	return status;
+    return status;
 }
 
 // 网络可达性状态改变
