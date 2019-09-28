@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
  添加网络可达性状态改变的监听者
  
  @discussion 传入的对象将被添加到网络可达性状态改变的监听者队列
+
+            使用此宏时不需再实现`-addMonitor:`方法
  
  @warning 使用通知监听网络可达性状态时实现
  
@@ -202,6 +204,21 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
         网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 - (void)addMonitor:(id)monitor reachabilityStatusChangedBlock:(nonnull void (^)(FLReachabilityStatus status))block;
+
+/*!
+ 添加网络可达性状态改变的监听者
+ 
+ @discussion 此方法用于将监听者添加到网络可达性状态监听队列，所有实现此方法的类都会接收到网络可达性状态改变的消息
+
+            使用此方法时不需再实现`kFLAddReachabilityStatusChangedObserver(observer)`宏
+ 
+ @param monitor 网络可达性监听者
+ 
+ @warning 使用通知监听网络可达性状态时实现
+ 
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
+ */
+- (void)addMonitor:(id)monitor;
 
 /*!
  当前网络可达性状态
