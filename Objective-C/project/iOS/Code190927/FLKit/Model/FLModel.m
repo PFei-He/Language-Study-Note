@@ -65,8 +65,6 @@
 
 @implementation FLModel (JSON)
 
-FL_CLASS_NAME(@"MODEL")
-
 #pragma mark - Private Methods
 
 // 解析 JSON
@@ -149,8 +147,6 @@ FL_CLASS_NAME(@"MODEL")
 @end
 
 @implementation FLModel (XML)
-
-FL_CLASS_NAME(@"MODEL")
 
 #pragma mark - Private Methods
 
