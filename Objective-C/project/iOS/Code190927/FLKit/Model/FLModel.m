@@ -22,6 +22,7 @@
 
 #import "FLModel.h"
 #import <objc/runtime.h>
+#import "NSObject+FLDebug.h"
 
 @interface FLModel () <NSXMLParserDelegate>
 
@@ -63,6 +64,8 @@
 @end
 
 @implementation FLModel (JSON)
+
+FL_CLASS_NAME(@"MODEL")
 
 #pragma mark - Private Methods
 
@@ -146,6 +149,8 @@
 @end
 
 @implementation FLModel (XML)
+
+FL_CLASS_NAME(@"MODEL")
 
 #pragma mark - Private Methods
 
@@ -239,6 +244,8 @@
 @end
 
 @implementation FLModel
+
+FL_CLASS_NAME(@"MODEL")
 
 #pragma mark - Life Cycle
 

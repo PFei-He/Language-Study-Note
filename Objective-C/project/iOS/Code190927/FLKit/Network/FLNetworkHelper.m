@@ -22,6 +22,7 @@
 
 #import "FLNetworkHelper.h"
 #import "NSObject+FLDebug.h"
+#import "NSObject+FLURL.h"
 
 // 网络请求队列
 static dispatch_queue_t network_helper_queue() {
@@ -172,33 +173,6 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
     
     // 返回数据请求
     return dataTask;
-}
-
-// 序列化参数
-- (NSString *)serializeParameters:(NSDictionary *)parameters
-{
-    NSMutableArray *pairs = NSMutableArray.array;
-    for (NSString *key in parameters.keyEnumerator) {
-        id value = parameters[key];
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            for (NSString *subKey in value) {
-                [pairs addObject:[NSString stringWithFormat:@"%@[%@]=%@", key, subKey, [self queryStringForURLParameter:[value objectForKey:subKey]]]];
-            }
-        } else if ([value isKindOfClass:[NSArray class]]) {
-            for (NSString *subValue in value) {
-                [pairs addObject:[NSString stringWithFormat:@"%@[]=%@", key, [self queryStringForURLParameter:subValue]]];
-            }
-        } else {
-            [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [self queryStringForURLParameter:[NSString stringWithFormat:@"%@", value]]]];
-        }
-    }
-    return [pairs componentsJoinedByString:@"&"];
-}
-
-// 将参数转为 URL 字符串格式
-- (NSString *)queryStringForURLParameter:(NSString *)parameter
-{
-    return [parameter stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 // 解析数据

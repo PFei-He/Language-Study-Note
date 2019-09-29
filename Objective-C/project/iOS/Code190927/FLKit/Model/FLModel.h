@@ -21,7 +21,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+FLDebug.h"
 
 @interface FLModel : NSObject
 

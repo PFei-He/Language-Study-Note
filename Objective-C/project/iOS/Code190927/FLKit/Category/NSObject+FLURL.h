@@ -20,25 +20,32 @@
 //  THE SOFTWARE.
 //
 
-#import "FLDebug.h"
-#import "FLNetworkHelper.h"
-#import "FLReachabilityHelper.h"
-#import "FLCryptor.h"
-#import "FLKeychainWrapper.h"
+#import <Foundation/Foundation.h>
 
-#import "NSObject+FLDebug.h"
+NS_ASSUME_NONNULL_BEGIN
 
-@implementation FLDebug
+@interface NSObject (FLURL)
 
-+ (void)debugMode:(BOOL)openOrNot
-{
-    [FLModel setDebugMode:openOrNot];
-    
-    [FLNetworkHelper setDebugMode:openOrNot];
-    [FLReachabilityHelper setDebugMode:openOrNot];
-    
-    [FLCryptor setDebugMode:openOrNot];
-    [FLKeychainWrapper setDebugMode:openOrNot];
-}
+/*!
+ 序列化参数
+ 
+ @param parameters 需要转化的参数
+ 
+ @return URL 格式化的字符串
+ */
+- (NSString *)serializeParameters:(NSDictionary *)parameters;
+
+/*!
+ 将参数转为 URL 字符串格式
+ 
+ @discussion 将已被 URL 格式化的字符串中的非法字符转为合法的格式，如中文字转化为 UTF-8
+ 
+ @param parameter URL 格式化的字符串
+ 
+ @return 符合 HTTP 请求格式的 URL 字符串
+ */
+- (NSString *)queryStringForURLParameter:(NSString *)parameter;
 
 @end
+
+NS_ASSUME_NONNULL_END
