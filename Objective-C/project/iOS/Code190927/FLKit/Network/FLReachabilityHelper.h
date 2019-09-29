@@ -27,28 +27,36 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  添加网络可达性状态改变的监听者
  
- @discussion 传入的对象将被添加到网络可达性状态改变的监听者队列
+ @discussion 此方法用于将监听者添加到网络可达性状态监听队列，所有实现此方法的类都会接收到网络可达性状态改变的消息
+ 
+            传入的对象为监听者
 
-            使用此宏时不需再实现`-addMonitor:`方法
+            使用此宏时不需实现 `-addMonitor:` 方法
  
  @warning 使用通知监听网络可达性状态时实现
  
         网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define kFLAddReachabilityStatusChangedObserver(observer) \
-[[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(handleReachabilityStatusChangedNotification:) name:kFLReachabilityStatusChangedNotification object:nil]
+[[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(handleReachabilityStatusChangedNotification:) name:kFLReachabilityStatusChangedNotification object:nil]; \
+FLLog(@"[ MONITOR ] Addid to reachability helper", @"[ USING ] Notification")
 
 /*!
  移除网络可达性状态改变的监听者
  
- @discussion 传入的对象将被从网络可达性状态改变的监听者队列中移除
+ @discussion 此方法用于将监听者从网络可达性状态监听队列移除
+ 
+            传入的对象为监听者
+ 
+            使用此宏时不需实现 `-removeMonitor:` 方法
  
  @warning 使用通知监听网络可达性状态时实现
  
         网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 #define kFLRemoveReachabilityStatusChangedObserver(observer) \
-[[NSNotificationCenter defaultCenter] removeObserver:observer name:kFLReachabilityStatusChangedNotification object:nil]
+[[NSNotificationCenter defaultCenter] removeObserver:observer name:kFLReachabilityStatusChangedNotification object:nil]; \
+FLLog(@"[ MONITOR ] Removed from reachability helper", @"[ USING ] Notification")
 
 /*!
  处理网络可达性状态改变的通知
@@ -128,6 +136,10 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
 /*!
  网络可达性助手代理
  
+ @discussion 此代理将被作为监听者添加到网络可达性状态监听队列
+ 
+            若此监听者被从内存中释放，监听队列会自动移除此监听者，不需手动管理
+ 
  @warning 使用代理监听网络可达性状态时实现
  
         网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
@@ -177,21 +189,14 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
  */
 - (BOOL)stopMonitor;
 
-//#pragma mark -
-//
-///*!
-// 判断设备是否按需连接
-//
-// @return 当前网络状态是否按需请求
-// */
-//- (BOOL)connectionRequired;
-
 #pragma mark -
 
 /*!
- 监听网络可达性状态
+ 添加网络可达性状态改变的监听者并设置回调
  
  @discussion 此方法用于将监听者添加到网络可达性状态监听队列，所有实现此方法的类都会接收到网络可达性状态改变的消息
+ 
+            若此监听者被从内存中释放，监听队列会自动移除此监听者，不需手动管理
  
  @param monitor 网络可达性监听者
  
@@ -210,7 +215,7 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
  
  @discussion 此方法用于将监听者添加到网络可达性状态监听队列，所有实现此方法的类都会接收到网络可达性状态改变的消息
 
-            使用此方法时不需再实现`kFLAddReachabilityStatusChangedObserver(observer)`宏
+            使用此方法时不需实现 `kFLAddReachabilityStatusChangedObserver(observer)` 宏
  
  @param monitor 网络可达性监听者
  
@@ -219,6 +224,21 @@ extern NSString * const kFLReachabilityStatusChangedNotification;
         网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
  */
 - (void)addMonitor:(id)monitor;
+
+/*!
+ 移除网络可达性状态改变的监听者
+ 
+ @discussion 此方法用于将监听者从网络可达性状态监听队列移除
+ 
+            使用此方法时不需实现 `kFLRemoveReachabilityStatusChangedObserver(observer)` 宏
+ 
+ @param monitor 网络可达性监听者
+ 
+ @warning 使用通知监听网络可达性状态时实现
+ 
+        网络可达性助手集成了代码块，代理，通知三种方式进行网络可达性状态监听，使用时只需实现其中一种方式即可
+ */
+- (void)removeMonitor:(id)monitor;
 
 /*!
  当前网络可达性状态

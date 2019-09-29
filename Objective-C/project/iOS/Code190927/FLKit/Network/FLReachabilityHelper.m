@@ -190,9 +190,8 @@ FL_CLASS_NAME(@"REACHABILITY")
 {
     if ([delegate respondsToSelector:@selector(reachabilityHelper:reachabilityStatusChanged:)]) {
         [self.delegates addPointer:(__bridge void*)delegate];
-	FLLog(@"[ MONITOR ] Added");
-        FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [delegate class]]);
-        FLLog(@"[ USING ] Delegate");
+        
+        FLLog(@"[ MONITOR ] Added", [NSString stringWithFormat:@"[ CLASS ] %@", [delegate class]], @"[ USING ] Delegate");
     }
 }
 
@@ -216,22 +215,22 @@ FL_CLASS_NAME(@"REACHABILITY")
 - (FLReachabilityStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags
 {
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0) { // 网络不通
-	return FLReachabilityStatusNone;
+        return FLReachabilityStatusNone;
     }
-
+    
     // 网络可达性状态
     FLReachabilityStatus status = FLReachabilityStatusUnknown;
-
+    
     if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0) { // 可连上目标主机
-	status = FLReachabilityStatusWiFi;
+        status = FLReachabilityStatusWiFi;
     }
-
+    
     if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand) != 0) || (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0)) { // 按需连接状态（CFSocketStream）
         if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0) { // 不需用户干预
             status = FLReachabilityStatusWiFi;
         }
     }
-
+    
     if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN) { // 使用的是 WWAN 网络接口（CFNetwork）
         
         // 获取当前数据网络的类型
@@ -262,8 +261,7 @@ FL_CLASS_NAME(@"REACHABILITY")
 // 网络可达性状态改变
 - (void)reachabilityChanged
 {
-    FLLog(@"[ STATUS ] Changed");
-    FLLog([NSString stringWithFormat:@"[ TYPE ] %@", FLReachabilityStatusConvert[self.previousStatus]]);
+    FLLog(@"[ STATUS ] Changed", [NSString stringWithFormat:@"[ TYPE ] %@", FLReachabilityStatusConvert[self.previousStatus]]);
     
     // 使用代码块回调
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -369,24 +367,30 @@ FL_CLASS_NAME(@"REACHABILITY")
 
 #pragma mark -
 
-// 监听网络可达性状态发生改变
+// 添加网络可达性状态改变的监听者并设置回调
 - (void)addMonitor:(id)monitor reachabilityStatusChangedBlock:(void (^)(FLReachabilityStatus))block
 {
     [self.monitors setObject:monitor forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
     [self.blocks setObject:block forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
     self.blocksCount++;
 	
-    FLLog(@"[ MONITOR ] Added");
-    FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]]);
-    FLLog(@"[ USING ] Block");
+    FLLog(@"[ MONITOR ] Added", [NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]], @"[ USING ] Block");
 }
 
-//
-- (void)addMonitor：(id)monitor
+// 添加网络可达性状态改变的监听者
+- (void)addMonitor:(id)monitor
 {
-    FLLog(@"[ MONITOR ] Added");
-    FLLog([NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]]);
-    FLLog(@"[ USING ] Notification");
+    [[NSNotificationCenter defaultCenter] addObserver:monitor selector:NSSelectorFromString(@"handleReachabilityStatusChangedNotification:") name:kFLReachabilityStatusChangedNotification object:nil];
+    
+    FLLog(@"[ MONITOR ] Added", [NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]], @"[ USING ] Notification");
+}
+
+// 移除网络可达性状态改变的监听者
+- (void)removeMonitor:(id)monitor
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:monitor name:kFLReachabilityStatusChangedNotification object:nil];
+    
+    FLLog(@"[ MONITOR ] Removed", [NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]], @"[ USING ] Notification");
 }
 
 // 当前网络可达性状态

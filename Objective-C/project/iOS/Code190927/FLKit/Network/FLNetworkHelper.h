@@ -245,7 +245,7 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
 /*!
  接收响应的任务
  
- @discussion 使用 kFLResponse 宏接收数据
+ @discussion 使用 `kFLResponse` 宏接收数据
  
  @warning 使用通知操作网络请求时实现
 
@@ -256,7 +256,7 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
 /*!
  请求成功的结果
  
- @discussion 使用 kFLResponse 宏接收数据
+ @discussion 使用 `kFLResponse` 宏接收数据
  
  @warning 使用通知操作网络请求时实现
  
@@ -267,7 +267,7 @@ typedef NS_ENUM(NSUInteger, FLNetworkRequestMethod) {
 /*!
  请求失败的结果
  
- @discussion 使用 kFLResponse 宏来接收数据
+ @discussion 使用 `kFLResponse` 宏接收数据
  
  @warning 使用通知操作网络请求时实现
  

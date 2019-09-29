@@ -23,6 +23,7 @@
 #import "FLNetworkHelper.h"
 #import "NSObject+FLDebug.h"
 
+// 网络请求队列
 static dispatch_queue_t network_helper_queue() {
     static dispatch_queue_t network_helper_creation_queue;
     static dispatch_once_t onceToken;
@@ -86,15 +87,6 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
     // 请求次数减一
     self.retryTimesCount--;
     
-    FLLog(@"[ REQUEST ] Sending",
-          (self.retryTimes - self.retryTimesCount == 1) ? @"[ STATUS ] Start" : @"[ STATUS ] Retry",
-          [NSString stringWithFormat:@"[ COUNT ] %@", @(self.retryTimes - self.retryTimesCount)],
-          [NSString stringWithFormat:@"[ URL ] %@", URLString],
-          [NSString stringWithFormat:@"[ METHOD ] %@", method],
-          [NSString stringWithFormat:@"[ TIMEOUT ] %@", @(self.timeoutInterval)],
-          [NSString stringWithFormat:@"[ HEADERS ] %@", self.requestHeaders],
-          [NSString stringWithFormat:@"[ PARAMS ] %@", body]);
-    
     // 创建请求
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:self.requestURL];
@@ -119,6 +111,9 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
     dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) { // 请求失败
             if (self.retryTimesCount < 1) {
+                
+                FLLog(@"[ REQUEST ] Failure", [NSString stringWithFormat:@"[ URL ] %@", request.URL]);
+                
                 // 使用代码块回调
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (failure) failure(dataTask, error);
@@ -142,6 +137,8 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
             // 解析 JSON
             NSDictionary *resultData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             
+            FLLog(@"[ REQUEST ] Success", [NSString stringWithFormat:@"[ URL ] %@", request.URL]);
+            
             // 使用代码块回调
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (success) success(dataTask, resultData);
@@ -160,6 +157,15 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
             });
         }
     }];
+    
+    FLLog(@"[ REQUEST ] Sending",
+          (self.retryTimes - self.retryTimesCount == 1) ? @"[ STATUS ] Start" : @"[ STATUS ] Retry",
+          [NSString stringWithFormat:@"[ COUNT ] %@", @(self.retryTimes - self.retryTimesCount)],
+          [NSString stringWithFormat:@"[ URL ] %@", request.URL],
+          [NSString stringWithFormat:@"[ METHOD ] %@", request.HTTPMethod],
+          [NSString stringWithFormat:@"[ TIMEOUT ] %@", @(request.timeoutInterval)],
+          [NSString stringWithFormat:@"[ HEADERS ] %@", request.allHTTPHeaderFields],
+          [NSString stringWithFormat:@"[ PARAMS ] %@", body]);
     
     // 发送请求
     [dataTask resume];
@@ -195,11 +201,19 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
     return [parameter stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
+// 解析数据
+- (void)prase
+{
+    
+}
+
 #pragma mark - Public Methods
 
 // 发送请求(代码块)
 - (NSURLSessionDataTask *)sendRequestSuccess:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nonnull))success failure:(void (^)(NSURLSessionDataTask * _Nonnull, NSError * _Nonnull))failure
 {
+    FLLog(@"[ REQUEST ] Added", @"[ USING ] Block");
+    
     // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
@@ -217,6 +231,8 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
 // 发送请求(代理)
 - (NSURLSessionDataTask *)sendRequest
 {
+    FLLog(@"[ REQUEST ] Added", @"[ USING ] Delegate");
+    
     // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
@@ -234,6 +250,8 @@ NSString * const FLNetworkRequestMethodConvert[4] = {
 // 发送请求(通知)
 - (NSURLSessionDataTask *)sendRequestForReceiver:(id)receiver
 {
+    FLLog(@"[ REQUEST ] Added", @"[ USING ] Notification");
+    
     // 设置数据请求
     __block NSURLSessionDataTask *dataTask = nil;
     dispatch_sync(network_helper_queue(), ^{
