@@ -80,9 +80,6 @@ NSString * const FLReachabilityStatusConvert[6] = {
 // 代码块计数
 @property (nonatomic) NSInteger blocksCount;
 
-// 代码块随机字符串
-@property (nonatomic, copy) NSString *random;
-
 @end
 
 @implementation FLReachabilityHelper
@@ -135,17 +132,6 @@ FL_CLASS_NAME(@"REACHABILITY")
     zeroAddress.sin_family = AF_INET;
     
     return [self helperWithAddress:(const struct sockaddr *)&zeroAddress];
-}
-
-// 代码块随机字符串
-- (NSString *)random
-{
-    if (!_random) {
-        char data[8];
-        for (int x = 0; x < 8; data[x++] = (char)('a' + (arc4random_uniform(26))));
-        _random = [[NSString alloc] initWithBytes:data length:8 encoding:NSUTF8StringEncoding];
-    }
-    return _random;
 }
 
 // 释放
@@ -352,27 +338,13 @@ FL_CLASS_NAME(@"REACHABILITY")
     return stopped;
 }
 
-//#pragma mark -
-//
-//// 判断设备是否按需连接
-//- (BOOL)connectionRequired
-//{
-//    SCNetworkReachabilityFlags flags;
-//
-//    if (SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags)) {
-//        return (flags & kSCNetworkReachabilityFlagsConnectionRequired);
-//    }
-//
-//    return NO;
-//}
-
 #pragma mark -
 
 // 添加网络可达性状态改变的监听者并设置回调
 - (void)addMonitor:(id)monitor reachabilityStatusChangedBlock:(void (^)(FLReachabilityStatus))block
 {
-    [self.monitors setObject:monitor forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
-    [self.blocks setObject:block forKey:[NSString stringWithFormat:@"%@_%@_%ld", kFLReachabilityStatusChangedBlock, self.random, (long)self.blocksCount]];
+    [self.monitors setObject:monitor forKey:[NSString stringWithFormat:@"%@_%ld", kFLReachabilityStatusChangedBlock, (long)self.blocksCount]];
+    [self.blocks setObject:block forKey:[NSString stringWithFormat:@"%@_%ld", kFLReachabilityStatusChangedBlock, (long)self.blocksCount]];
     self.blocksCount++;
 	
     FLLog(@"[ MONITOR ] Added", [NSString stringWithFormat:@"[ CLASS ] %@", [monitor class]], @"[ USING ] Block");

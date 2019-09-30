@@ -100,6 +100,13 @@ typedef NS_ENUM(NSUInteger, FLReachabilityStatus) {
 };
 
 /*!
+ 网络可达性状态转化
+ 
+ @discussion 将当前网络可达性状态转化为字符串
+ */
+extern NSString * _Nonnull const FLReachabilityStatusConvert[];
+
+/*!
  网络可达性状态改变的通知名
  
  @discussion 使用通知监听网络可达性状态时监听此通知名，所有监听此通知名的类都会接收到网络可达性状态改变的消息
