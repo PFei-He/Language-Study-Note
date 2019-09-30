@@ -32,14 +32,17 @@
         id value = parameters[key];
         if ([value isKindOfClass:[NSDictionary class]]) {
             for (NSString *subKey in value) {
-                [pairs addObject:[NSString stringWithFormat:@"%@[%@]=%@", key, subKey, [self queryStringForURLParameter:[value objectForKey:subKey]]]];
+                // [pairs addObject:[NSString stringWithFormat:@"%@[%@]=%@", key, subKey, [self queryStringForURLParameter:[value objectForKey:subKey]]]];
+                [pairs addObject:[NSString stringWithFormat:@"%@[%@]=%@", key, subKey, [value objectForKey:subKey]]];
             }
         } else if ([value isKindOfClass:[NSArray class]]) {
             for (NSString *subValue in value) {
-                [pairs addObject:[NSString stringWithFormat:@"%@[]=%@", key, [self queryStringForURLParameter:subValue]]];
+                // [pairs addObject:[NSString stringWithFormat:@"%@[]=%@", key, [self queryStringForURLParameter:subValue]]];
+                [pairs addObject:[NSString stringWithFormat:@"%@[]=%@", key, subValue]];
             }
         } else {
-            [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [self queryStringForURLParameter:[NSString stringWithFormat:@"%@", value]]]];
+            // [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [self queryStringForURLParameter:[NSString stringWithFormat:@"%@", value]]]];
+            [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [NSString stringWithFormat:@"%@", value]]];
         }
     }
     return [pairs componentsJoinedByString:@"&"];
