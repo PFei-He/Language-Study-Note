@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 #define kFLAddReachabilityStatusChangedObserver(observer) \
 [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(handleReachabilityStatusChangedNotification:) name:kFLReachabilityStatusChangedNotification object:nil]; \
-FLLog(@"[ MONITOR ] Addid to reachability helper", @"[ USING ] Notification")
+FLLog(@"[ OBSERVER ] Added to reachability helper", @"[ USING ] Notification")
 
 /*!
  移除网络可达性状态改变的监听者
@@ -56,7 +56,7 @@ FLLog(@"[ MONITOR ] Addid to reachability helper", @"[ USING ] Notification")
  */
 #define kFLRemoveReachabilityStatusChangedObserver(observer) \
 [[NSNotificationCenter defaultCenter] removeObserver:observer name:kFLReachabilityStatusChangedNotification object:nil]; \
-FLLog(@"[ MONITOR ] Removed from reachability helper", @"[ USING ] Notification")
+FLLog(@"[ OBSERVER ] Removed from reachability helper", @"[ USING ] Notification")
 
 /*!
  处理网络可达性状态改变的通知
